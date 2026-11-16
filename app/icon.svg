@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aurelia">
+  <rect width="64" height="64" rx="13" fill="#1b1611"/>
+  <g fill="none" stroke="#d7a262" stroke-width="2" stroke-linecap="round">
+    <path d="M12 50h40"/>
+    <path d="M17.5 44V32a14.5 14.5 0 0 1 29 0v12"/>
+    <path d="M32 8v6M17.8 16.2l4.1 4.1M46.2 16.2l-4.1 4.1"/>
+    <circle cx="32" cy="32" r="3" fill="#d7a262" stroke="none"/>
+  </g>
+</svg>

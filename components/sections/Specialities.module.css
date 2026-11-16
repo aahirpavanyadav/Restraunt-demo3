@@ -1,0 +1,243 @@
+.section {
+  background: var(--bg);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 20rem);
+  align-items: end;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.35rem;
+  padding-bottom: 0.25rem;
+}
+
+.aside p {
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  margin-top: clamp(2.5rem, 5vw, 4.25rem);
+}
+
+.offset {
+  margin-top: clamp(0rem, 3.5vw, 3.25rem);
+}
+
+.card {
+  min-width: 0;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-sunken);
+}
+
+.imageWrap img {
+  object-fit: cover;
+  transition:
+    transform 0.9s var(--ease-out),
+    filter 0.4s var(--ease);
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.035);
+  filter: var(--image-hover-filter);
+}
+
+.index {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  background: rgba(18, 14, 10, 0.62);
+  color: #f7efe2;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.55rem 0.8rem;
+  background: var(--surface-raised);
+  color: var(--accent);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.body {
+  padding-top: 1.15rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.titleRow h3 {
+  font-size: clamp(1.35rem, 2vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.price {
+  flex: none;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.body > p {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.tags {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.tags li {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  height: 1.3rem;
+  padding: 0 0.32rem;
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--ink);
+  transition:
+    background-color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+
+.cardLink svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.cardLink:hover {
+  border-color: var(--btn-bg);
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+@media (max-width: 1100px) {
+  .head {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+
+  .aside {
+    max-width: 30rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .offset {
+    margin-top: 0;
+  }
+
+  .card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .card:last-child article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+    align-items: center;
+  }
+
+  .card:last-child .imageWrap {
+    aspect-ratio: 5 / 4;
+  }
+
+  .card:last-child .body {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card:last-child article {
+    display: block;
+  }
+
+  .card:last-child .imageWrap {
+    aspect-ratio: 4 / 5;
+  }
+
+  .card:last-child .body {
+    padding-top: 1.15rem;
+  }
+
+  .imageWrap {
+    aspect-ratio: 4 / 5;
+  }
+}

@@ -1,21 +1,22 @@
 {
-  "name": "lumina-restaurant-demo",
+  "name": "aurelia-restaurant",
   "version": "1.0.0",
-  "description": "High-end modern restaurant web demo for fine dining, bistro, or hospitality clients",
-  "main": "index.html",
+  "private": true,
   "scripts": {
-    "start": "python3 -m http.server 3000 --directory .",
-    "dev": "python3 -m http.server 3000 --directory .",
-    "serve": "npx serve -l 3000 ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
   },
-  "keywords": [
-    "restaurant",
-    "web-demo",
-    "fine-dining",
-    "hospitality",
-    "table-reservation",
-    "culinary-menu"
-  ],
-  "author": "Antigravity Studio",
-  "license": "MIT"
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.0"
+  }
 }

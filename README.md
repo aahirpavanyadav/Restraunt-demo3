@@ -1,93 +1,125 @@
-# LUMINA | Modern Hearth & Botanical Lounge
-### Clean & Professional Web Demo for Restaurant Clients
+# Aurelia
 
-A production-grade, highly engaging, responsive web demo tailored for hospitality, fine dining, bistros, steakhouses, and culinary clients. Designed with dark luxury aesthetics, refined typography, and practical guest features.
+A premium, fully responsive concept website for **Aurelia**, a fictional modern
+European restaurant in Mayfair, London. Built with Next.js App Router, React and
+hand-authored CSS Modules — no UI or animation libraries.
 
----
+> **Concept project.** The restaurant, address, phone number, people, reviews and
+> imagery are illustrative. The reservation form is a front-end demonstration: it
+> validates input and shows a confirmation summary, but it is **not connected to a
+> backend**, sends and stores nothing, and never holds a table.
 
-## 🌟 Demo Highlights & Client Features
+## Getting started
 
-1. **Brand Identity & Atmosphere**:
-   - Distinctive luxury palette: rich obsidian `#0b0c0e`, warm charcoal, and champagne gold accents.
-   - Editorial typography utilizing Google Fonts (`Playfair Display`, `Cinzel`, `Plus Jakarta Sans`).
-   - Accolades highlight bar (Michelin Guide selected, 4.9★ guest ratings, 45-day dry-aged cuts, 1,200+ cellar bottles).
-
-2. **Real-time Operating Status**:
-   - Dynamic opening hours calculation pill (`Open Now` / `Closed Now` with live status indicator dot based on the customer's actual local time and day).
-
-3. **Interactive Seasonal Menu & Cellar**:
-   - Category filtering: Starters, Hearth Mains, Raw Bar & Seafood, Confections, and Cocktails.
-   - Live search by dish name, ingredients, or wine pairings.
-   - Dietary filter toggle (Vegetarian, Vegan, Gluten-Free, Chef's Signature).
-   - High-definition culinary photography with zoom effects.
-
-4. **Dish Quick-View Modal**:
-   - Detailed nutritional info (calories, prep time).
-   - Allergen transparency cards.
-   - Sommelier's recommended wine pairing with tasting notes.
-   - One-click "Add to Tasting Order".
-
-5. **Interactive Table Reservation Wizard**:
-   - Party size selector (1 to 8+ guests).
-   - Date picker & prime dining time slots (Early seating, Prime 7:30 PM, Lounge).
-   - Seating atmosphere preference selector (Main Hearth Dining, Botanical Greenhouse, Chef's Tasting Counter, Heated Harbor Terrace).
-   - Guest contact details & special occasion tag (Anniversary, Birthday, Business Entertaining).
-   - Immediate simulated booking confirmation ticket with reference ID (e.g. `LUM-849201`) and `.ics` calendar pass download trigger.
-
-6. **Tasting Slate / Order Drawer**:
-   - Slide-over order drawer with real-time subtotal, 8.875% tax, and gratuity selector (18%, 20%, 25%, Custom).
-   - Seamless connection between the online pre-order and table reservation.
-
-7. **Private Dining & Event Inquiry Modal**:
-   - Lead capture form for corporate galas, rehearsal dinners, and full restaurant buyouts.
-
-8. **SEO & Structured Data**:
-   - Pre-configured `schema.org/Restaurant` JSON-LD rich snippet for search engine visibility.
-
----
-
-## 🚀 Quick Start / How to Run
-
-### Option 1: Instant Python HTTP Server (Zero Dependencies)
 ```bash
-cd /home/dvlpr/.gemini/antigravity/scratch/restaurant-demo
-python3 -m http.server 3000
+npm install
+npm run dev        # http://localhost:3000
 ```
-Then open `http://localhost:3000` in your browser.
 
-### Option 2: Using Node / NPM
+Production build:
+
 ```bash
-npm start
-# or
-npm run serve
+npm run build
+npm run start
 ```
 
-### Option 3: Direct File
-You can also directly open `index.html` in any modern web browser (Chrome, Safari, Edge, Firefox).
+Other scripts: `npm run typecheck` (TypeScript, no emit).
 
----
+Requires Node.js 20+. Set `NEXT_PUBLIC_SITE_URL` to the deployed origin so
+canonical URLs, Open Graph metadata, the sitemap and JSON-LD use the real domain.
+It defaults to `https://aurelia-mayfair.example.com`.
 
-## 📁 File Structure
+## Design system
+
+All theme-dependent colours are CSS custom properties declared in
+`app/globals.css`. There are two independently art-directed palettes:
+
+| Token group | Light | Dark |
+| --- | --- | --- |
+| Surfaces | warm cream paper (`#f6f1e7` → `#fcf8f1`) | deep espresso (`#131110` → `#25201a`) |
+| Ink | charcoal (`#211c16`) | warm white (`#f3ece1`) |
+| Accent | burnt amber (`#8a4c1d`) | brass (`#d7a262`) |
+| Primary button | charcoal fill / cream text | brass fill / espresso text |
+| Lines | sand (`#ded3c2`) | warm charcoal (`#352e26`) |
+
+Component styles only reference tokens (`var(--ink)`, `var(--surface)`,
+`var(--accent)` …), so a palette change happens in one place. Form controls use
+the stronger `--field-border` token to satisfy non-text contrast.
+
+Typography:
+
+- **Fraunces** for display headings, with the `SOFT` and `WONK` variable axes.
+- **Manrope** for body copy and UI labels.
+- Fluid sizing via `clamp()`; the header height is tokenised as `--header-h`.
+
+## Theming
+
+- An inline script in `<head>` (`app/layout.tsx`) applies the stored theme from
+  `localStorage` (`aurelia-theme`) or the OS `prefers-color-scheme` **before first
+  paint**, preventing a flash of the wrong theme.
+- `components/theme/ThemeToggle.tsx` updates `data-theme`, persists the choice,
+  follows OS changes while no explicit choice is stored, and syncs across tabs via
+  the `storage` event.
+- A short `theme-transition` class animates colour changes; it is skipped when
+  `prefers-reduced-motion: reduce` is set.
+- `color-scheme` and `theme-color` are set per theme for native controls and
+  browser chrome.
+
+## Structure
 
 ```
-restaurant-demo/
-├── index.html            # Main markup, semantic sections, schema.org JSON-LD
-├── css/
-│   └── styles.css        # Custom luxury animations, glassmorphism, buttons, scrollbar
-├── js/
-│   ├── data.js           # Restaurant info, menu items, wine pairings, team, reviews
-│   └── app.js            # State management, filtering, cart drawer, reservation wizard, modals
-├── assets/               # Placeholder for custom client logos and high-res assets
-├── package.json          # Preview scripts
-└── README.md             # Documentation and client handover guide
+app/
+  layout.tsx        fonts, metadata, theme bootstrap, header/footer shell
+  page.tsx          section composition + Restaurant JSON-LD
+  globals.css       design tokens, both themes, base styles, utilities
+  sitemap.ts        sitemap
+  robots.ts         robots rules
+  icon.svg          favicon
+components/
+  layout/           Header (sticky nav, scroll spy, mobile dialog), Footer
+  sections/         Hero, About, Menu, Specialities, Gallery, Testimonials,
+                    Reservation, Contact
+  theme/            ThemeToggle
+  ui/               Icons, Logo, Reveal, SectionHeading
+lib/
+  site.ts           brand, contact, address, hours, nav, booking options
+  content.ts        dishes, dietary tags, signatures, gallery, testimonials
+public/images/      curated, locally served photography
 ```
 
----
+## Interactions and accessibility
 
-## 🎨 Customizing for Your Client
+- Semantic landmarks, one `h1`, labelled sections, a skip link and visible focus
+  styles throughout.
+- Sticky desktop navigation with scroll-spy `aria-current`; below 1024px a native
+  `<dialog>` mobile sheet with scroll lock and focus return.
+- Menu filters are `aria-pressed` buttons with a polite live region announcing the
+  result count. Filtering works with keyboard activation and remounts the grid for
+  a subtle entrance animation.
+- Gallery uses a native `<dialog>` lightbox: arrow-key navigation, Escape/close
+  button, backdrop click, and focus moved to the close control.
+- The reservation form validates name, phone, email, date (no past dates, no
+  Mondays, up to six months ahead), time, guests and request length. Errors use
+  `aria-invalid`/`aria-describedby`, submit focuses the first invalid field, and
+  the result panel is announced with `role="status"`. The success panel explicitly
+  states that nothing was sent or stored.
+- Animations use CSS transforms/opacity and `IntersectionObserver`; all motion is
+  disabled under `prefers-reduced-motion`.
+- Below-the-fold images are lazy-loaded; the hero image is prioritised. Images use
+  fixed aspect-ratio containers to avoid layout shift.
+- Colour contrast was checked with axe-core: **zero WCAG 2.1 A/AA violations** in
+  both themes at mobile and desktop widths.
 
-To adapt this demo for a specific client:
-- **Change Restaurant Name & Tagline**: Edit `info` object in `js/data.js` and top logo in `index.html`.
-- **Change Menu Items & Prices**: Simply update the `menuItems` array in `js/data.js`.
-- **Change Photos**: Replace Unsplash URLs in `js/data.js` with client food photos.
-- **Change Primary Colors**: Adjust `--gold-primary` and `--bg-primary` variables in `css/styles.css`.
+## Imagery
+
+Photography is stored locally in `public/images` and served through `next/image`
+(AVIF/WebP, responsive sizes, quality tuned per use). The photographs are from
+[Unsplash](https://unsplash.com) and are used here for demonstration only; they
+are not tied to a real restaurant. Replace them with licensed brand photography
+before any commercial use.
+
+## Known limitation
+
+There is no bookings backend. To take real reservations, connect the form to a
+booking provider or API, handle server-side validation and spam protection, and
+replace the demo success message with the provider's confirmation state.

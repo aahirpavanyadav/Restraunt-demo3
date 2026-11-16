@@ -1,0 +1,370 @@
+.menu {
+  background: var(--bg-subtle);
+  border-block: 1px solid var(--border);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 18rem);
+  align-items: end;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.seasonNote {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border-strong);
+}
+
+.season {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.seasonNote p {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.filters {
+  display: flex;
+  gap: clamp(1.3rem, 2.6vw, 2.4rem);
+  margin-bottom: -1px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter {
+  position: relative;
+  flex: none;
+  min-height: 2.9rem;
+  padding: 0 0 0.9rem;
+  border-bottom: 1px solid transparent;
+  color: var(--ink-soft);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease);
+}
+
+.filter:hover {
+  color: var(--ink);
+}
+
+.filter[aria-pressed="true"] {
+  border-bottom-color: var(--accent);
+  color: var(--ink);
+}
+
+.count {
+  flex: none;
+  padding-bottom: 0.95rem;
+  color: var(--ink-faint);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.15rem, 2vw, 1.75rem);
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.item {
+  min-width: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition:
+    border-color 0.35s var(--ease),
+    box-shadow 0.35s var(--ease),
+    transform 0.35s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--surface-sunken);
+}
+
+.imageWrap img {
+  object-fit: cover;
+  transition:
+    transform 0.8s var(--ease-out),
+    filter 0.4s var(--ease);
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.045);
+  filter: var(--image-hover-filter);
+}
+
+.featured {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.36rem 0.55rem;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  color: var(--accent);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: clamp(1.1rem, 1.8vw, 1.45rem);
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.titleRow h3 {
+  font-size: clamp(1.22rem, 1.7vw, 1.42rem);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.price {
+  flex: none;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 1.06rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+
+.description {
+  margin-top: 0.6rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.55rem;
+  height: 1.3rem;
+  padding: 0 0.32rem;
+  border: 1px solid var(--border);
+  color: var(--ink-soft);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.noTags {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--ink-faint);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(2.25rem, 4vw, 3.25rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  max-width: 52ch;
+  color: var(--ink-soft);
+  font-size: 0.74rem;
+  line-height: 1.65;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .item {
+    opacity: 0;
+    animation: cardIn 0.55s var(--ease-out) both;
+    animation-delay: calc(var(--i, 0) * 42ms);
+  }
+}
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (hover: none) {
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .head {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .seasonNote {
+    max-width: 28rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: clamp(6.2rem, 28vw, 7.6rem) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .imageWrap {
+    height: 100%;
+    min-height: 8.6rem;
+    aspect-ratio: auto;
+  }
+
+  .featured {
+    top: 0.42rem;
+    left: 0.42rem;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.42rem;
+    letter-spacing: 0.12em;
+  }
+
+  .body {
+    padding: 0.8rem 0.9rem;
+    min-width: 0;
+  }
+
+  .titleRow {
+    gap: 0.5rem;
+  }
+
+  .titleRow h3 {
+    font-size: 1.08rem;
+    line-height: 1.22;
+  }
+
+  .price {
+    font-size: 0.96rem;
+  }
+
+  .description {
+    display: -webkit-box;
+    margin-top: 0.3rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .tags {
+    padding-top: 0.55rem;
+  }
+
+  .noTags {
+    padding-top: 0.55rem;
+    font-size: 0.5rem;
+  }
+
+  .toolbar {
+    align-items: flex-end;
+    gap: 0.75rem;
+  }
+
+  .filters {
+    gap: 1.35rem;
+  }
+
+  .count {
+    display: none;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.4rem;
+  }
+}

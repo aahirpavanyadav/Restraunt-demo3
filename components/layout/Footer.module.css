@@ -1,0 +1,246 @@
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-ink);
+  padding-top: clamp(4rem, 7vw, 6.25rem);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.6fr 0.75fr 1.05fr 1.05fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+}
+
+.brandText {
+  max-width: 26ch;
+  color: var(--footer-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.social {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--footer-border);
+  border-radius: 50%;
+  color: var(--footer-ink);
+  transition:
+    color 0.25s var(--ease),
+    border-color 0.25s var(--ease),
+    background-color 0.25s var(--ease);
+}
+
+.social a:hover {
+  border-color: var(--accent-bright);
+  background: color-mix(in srgb, var(--accent-bright) 12%, transparent);
+  color: var(--accent-bright);
+}
+
+.social svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.column {
+  color: var(--footer-muted);
+}
+
+.columnTitle {
+  margin-bottom: 1.3rem;
+  color: var(--footer-ink);
+  font-family: var(--font-sans);
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.linkList {
+  display: grid;
+  gap: 0.72rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.linkList a {
+  width: fit-content;
+  color: var(--footer-muted);
+  transition: color 0.25s var(--ease);
+}
+
+.linkList a:hover {
+  color: var(--footer-ink);
+}
+
+.address {
+  display: grid;
+  gap: 0.12rem;
+  margin-bottom: 1rem;
+  color: var(--footer-muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.reserveLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.reserveLink svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  transition: transform 0.25s var(--ease);
+}
+
+.reserveLink:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.hours {
+  display: grid;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.hoursRow dt {
+  color: var(--footer-muted);
+}
+
+.hoursRow dd {
+  color: var(--footer-ink);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.footnote {
+  max-width: 26ch;
+  margin-top: 1.15rem;
+  color: var(--footer-muted);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+
+.credit {
+  margin-left: auto;
+  color: var(--footer-muted);
+}
+
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0;
+  color: var(--footer-ink);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.25s var(--ease);
+}
+
+.backToTop span {
+  display: inline-block;
+  transition: transform 0.25s var(--ease);
+}
+
+.backToTop:hover {
+  color: var(--accent-bright);
+}
+
+.backToTop:hover span {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+  .top {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+    max-width: 34rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem 1.5rem;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+
+  .linkList {
+    gap: 0.2rem;
+  }
+
+  .linkList a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.4rem;
+  }
+
+  .hoursRow {
+    min-height: 2.1rem;
+  }
+
+  .bottom {
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+  }
+
+  .credit {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .backToTop {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+}
