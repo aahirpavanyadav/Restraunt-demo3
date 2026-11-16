@@ -1,0 +1,182 @@
+/* VERDANT Table & Garden - Aesthetic Optimized Stylesheet */
+
+:root {
+  --bg-canvas: #FAF7F2;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F3EFEA;
+  --bg-card: #FFFFFF;
+  --text-primary: #1C2A24;
+  --text-muted: #607269;
+  --accent-terracotta: #D06746;
+  --accent-terracotta-hover: #BF5736;
+  --accent-forest: #274337;
+  --accent-forest-hover: #1A3026;
+  --accent-sage: #537765;
+  --accent-sage-light: #EBF1ED;
+  --accent-gold: #C69A4F;
+  --border-light: rgba(28, 42, 36, 0.09);
+  --border-focus: rgba(208, 103, 70, 0.4);
+  --shadow-soft: 0 12px 35px -8px rgba(28, 42, 36, 0.07), 0 4px 16px -4px rgba(28, 42, 36, 0.03);
+  --shadow-hover: 0 20px 45px -10px rgba(28, 42, 36, 0.12), 0 8px 20px -4px rgba(28, 42, 36, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C7;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-sage);
+}
+
+/* Base Typography & Background */
+html {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Display Serif Font (Fraunces & Playfair feel) */
+.font-display {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 36, 'wght' 500, 'SOFT' 40;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Atmospheric Gradients */
+.terracotta-text-gradient {
+  background: linear-gradient(135deg, #D06746 0%, #B8502F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.forest-text-gradient {
+  background: linear-gradient(135deg, #1C2A24 0%, #375346 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft Cards */
+.clean-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.clean-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(208, 103, 70, 0.3);
+}
+
+/* Image zoom on hover */
+.clean-card:hover .zoom-img {
+  transform: scale(1.05);
+}
+.zoom-img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Buttons */
+.btn-terracotta {
+  background: linear-gradient(135deg, #DB7353 0%, #C75F3E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -4px rgba(208, 103, 70, 0.35);
+  transition: all 0.25s ease;
+}
+.btn-terracotta:hover {
+  background: linear-gradient(135deg, #C75F3E 0%, #B44F30 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -4px rgba(208, 103, 70, 0.45);
+}
+
+.btn-forest {
+  background: var(--accent-forest);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -4px rgba(28, 42, 36, 0.25);
+  transition: all 0.25s ease;
+}
+.btn-forest:hover {
+  background: var(--accent-forest-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px -4px rgba(28, 42, 36, 0.35);
+}
+
+.btn-outline-clean {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+}
+.btn-outline-clean:hover {
+  border-color: var(--accent-terracotta);
+  color: var(--accent-terracotta);
+  transform: translateY(-2px);
+  background: #FFFDFB;
+}
+
+/* Drawer transitions */
+.drawer-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-panel {
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.drawer-panel.active {
+  transform: translateX(0);
+}
+
+/* Subtle Pulsing Status */
+@keyframes pulse-emerald {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.15); }
+}
+.status-pulse {
+  animation: pulse-emerald 2s infinite ease-in-out;
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+}
+.toast-msg {
+  pointer-events: auto;
+  animation: toast-fly 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes toast-fly {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

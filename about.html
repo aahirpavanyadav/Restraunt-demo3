@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Learn the history and passion behind Bella Cucina, New York's premier Italian dining sanctuary founded by Chef Marco Rossi.">
+  <title>About Us | Bella Cucina - Italian Heritage &amp; Excellence</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>About Us</span>
+    </nav>
+    <span class="page-hero-eyebrow">Passione &amp; Tradizione</span>
+    <h1 class="page-hero-title">Our Story &amp; Heritage</h1>
+    <p class="page-hero-desc">A culinary journey rooted in ancestral Tuscan traditions and elevated with modern gastronomic passion.</p>
+  </div>
+</section>
+
+    <!-- Story Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <!-- Left: Story Text -->
+          <div class="fade-in">
+            <span class="section-eyebrow">A Passion Born In Tuscany</span>
+            <h2 style="margin-bottom: 1.5rem;">From Florence to the Heart of Manhattan</h2>
+            <p>
+              Founded in 2010 by Master Chef Marco Rossi, Bella Cucina was born out of a desire to preserve the sacred authenticity of Italian cooking while creating a warm, elegant haven for discerning New York food lovers.
+            </p>
+            <p>
+              Growing up in the hills of Florence, Chef Marco learned to make pasta before he could ride a bicycle. His nonna taught him that every meal is an expression of affection, requiring patience, authentic provenance, and deep respect for every ingredient that touches the flame.
+            </p>
+            <p>
+              Today, Bella Cucina stands as a testament to that legacy. Every ribbon of pasta is kneaded fresh daily in our glass kitchen, every sauce simmers slowly for hours, and our sommelier curates the finest vintages from boutique estates across Piedmont, Tuscany, and Sicily.
+            </p>
+            <div style="margin-top: 1.8rem;">
+              <a href="chef.html" class="btn btn-primary">Meet Chef Marco Rossi →</a>
+            </div>
+          </div>
+
+          <!-- Right: Visual Placeholder Box -->
+          <div class="visual-placeholder fade-in" style="min-height: 420px;">
+            <div class="visual-emoji">🏛️</div>
+            <h3 class="visual-title">The Bella Cucina Sanctuary</h3>
+            <span class="visual-tag">128 Olive Garden Lane &bull; Established 2010</span>
+            <p style="font-size: 0.88rem; color: #b5ad9e; max-width: 340px; margin-top: 0.8rem;">
+              Featuring exposed brick, handcrafted mahogany furnishings, and our state-of-the-art climate-controlled wine cellar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Our Philosophy</span>
+          <h2 class="section-title">The Four Pillars of Our Craft</h2>
+          <p class="section-desc">Guided by uncompromising values that define every dish and every greeting.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Pillar 1 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin-left: auto; margin-right: auto;">🌾</div>
+            <h4>Authentic Provenance</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              DOP-certified cheeses, heirloom grains, and extra virgin olive oil pressed from centuries-old Tuscan groves.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin-left: auto; margin-right: auto;">👐</div>
+            <h4>Handcrafted Artistry</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              No industrial shortcuts. Fresh pasta rolled every morning, bread baked twice daily, and stocks reduced without compromise.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin-left: auto; margin-right: auto;">🍷</div>
+            <h4>Unrivaled Wine Cellar</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              A cellar boasting over 450 labels featuring rare Brunellos, classic Barolos, Super Tuscans, and biodynamic producers.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin-left: auto; margin-right: auto;">❤️</div>
+            <h4>Warm Hospitality</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Italian hospitality means welcoming every guest as family, anticipating needs with quiet elegance and genuine care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestone Timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Growth &amp; Milestones</span>
+          <h2 class="section-title">Our Culinary Journey Through Time</h2>
+          <p class="section-desc">From our humble opening to becoming an iconic Manhattan dining staple.</p>
+        </div>
+
+        <div class="timeline fade-in">
+          <!-- 2010 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2010</span>
+            <div class="timeline-content">
+              <h4>The Doors Open in Manhattan</h4>
+              <p style="color: var(--color-text-muted); margin-top: 0.4rem;">
+                Chef Marco Rossi opens Bella Cucina with a cozy 40-seat dining room and a 4-person pasta kitchen on Olive Garden Lane.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2013 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2013</span>
+            <div class="timeline-content">
+              <h4>First Major Accolade</h4>
+              <p style="color: var(--color-text-muted); margin-top: 0.4rem;">
+                Awarded "Best Authentic Italian Restaurant" by the NYC Culinary Review and listed among New York’s top dining discoveries.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2016 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2016</span>
+            <div class="timeline-content">
+              <h4>Cellar &amp; Private Dining Expansion</h4>
+              <p style="color: var(--color-text-muted); margin-top: 0.4rem;">
+                Expanded into the adjoining historical brownstone, building our custom climate-controlled wine cellar and the 'Sala Firenze' private dining suite.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2020 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2020</span>
+            <div class="timeline-content">
+              <h4>Gourmet Pantry &amp; Online Offerings</h4>
+              <p style="color: var(--color-text-muted); margin-top: 0.4rem;">
+                Launched our signature meal kits, digital reservations, and artisanal Italian pantry line to bring Bella Cucina into patrons' homes.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2024</span>
+            <div class="timeline-content">
+              <h4>Architectural Renovation &amp; Michelin Honors</h4>
+              <p style="color: var(--color-text-muted); margin-top: 0.4rem;">
+                Completed a lavish multi-month renovation featuring custom terrazzo floors, acoustic design, and earned renewed Michelin Guide Selection status.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Accolades &amp; Honors</span>
+          <h2 class="section-title">Recognized For Excellence</h2>
+          <p class="section-desc">Celebrated by world-renowned critics and hospitality institutions.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card card-dark text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">⭐</div>
+            <h4 style="color: #ffffff;">Michelin Guide Selection</h4>
+            <span class="badge badge-gold" style="margin: 0.5rem 0 1rem 0;">2021 – 2024</span>
+            <p style="font-size: 0.9rem; color: #b5ad9e;">
+              Recognized consistently for mastery of traditional Italian cooking, impeccable ingredient sourcing, and refined tableside service.
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">🏆</div>
+            <h4 style="color: #ffffff;">Wine Spectator Award</h4>
+            <span class="badge badge-gold" style="margin: 0.5rem 0 1rem 0;">Best of Award of Excellence</span>
+            <p style="font-size: 0.9rem; color: #b5ad9e;">
+              Honoring an expansive collection featuring rare vintage Brunello di Montalcino, Super Tuscans, and regional Italian gems.
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">🥇</div>
+            <h4 style="color: #ffffff;">NYC Hospitality Guild</h4>
+            <span class="badge badge-gold" style="margin: 0.5rem 0 1rem 0;">Top Italian Dining 2023</span>
+            <p style="font-size: 0.9rem; color: #b5ad9e;">
+              Voted premier Italian dining establishment for romantic evenings, impeccable private dining, and hospitable warmth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

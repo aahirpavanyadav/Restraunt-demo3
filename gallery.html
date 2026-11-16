@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Immerse yourself in the visual splendor of Bella Cucina. Visual gallery of artisanal Italian dishes, romantic ambiance, and celebrations.">
+  <title>Photo Gallery | Bella Cucina - Italian Visual Experience</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Gallery</span>
+    </nav>
+    <span class="page-hero-eyebrow">Esperienza Visiva</span>
+    <h1 class="page-hero-title">Galleria Fotografica</h1>
+    <p class="page-hero-desc">A feast for the senses. Explore glimpses of our kitchen, candlelit dining rooms, and memorable galas.</p>
+  </div>
+</section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Visual Journey</span>
+          <h2 class="section-title">Moments of Gastronomy &amp; Beauty</h2>
+          <p class="section-desc">Click any image to view details in the high-resolution lightbox display.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs gallery-tabs fade-in">
+          <button class="tab-btn active" data-gallery-filter="all">All Photos</button>
+          <button class="tab-btn" data-gallery-filter="food">Cuisine &amp; Wine</button>
+          <button class="tab-btn" data-gallery-filter="ambiance">Atmosphere &amp; Decor</button>
+          <button class="tab-btn" data-gallery-filter="events">Special Events</button>
+        </div>
+
+        <!-- Masonry Grid -->
+        <div class="masonry-grid fade-in">
+          
+          <!-- Item 1: Food (Medium) -->
+          <div class="masonry-item h-md" data-gallery-category="food" data-emoji="🍝" data-title="Artisanal Hand-Rolled Tagliolini" data-desc="Chef Marco Rossi delicately shaving fresh black truffles over golden hand-kneaded pasta ribbons.">
+            <span class="masonry-emoji">🍝</span>
+            <h3 class="masonry-title">Handmade Pasta Masterclass</h3>
+            <span class="masonry-tag">Cuisine &bull; Truffle Season</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 2: Ambiance (Large) -->
+          <div class="masonry-item h-lg" data-gallery-category="ambiance" data-emoji="🕯️" data-title="The Candlelit Main Dining Room" data-desc="Intimate evening ambiance illuminated by century-old vintage sconces, exposed Manhattan brick, and crisp linen tables.">
+            <span class="masonry-emoji">🕯️</span>
+            <h3 class="masonry-title">The Romantic Hall</h3>
+            <span class="masonry-tag">Atmosphere &bull; Main Salon</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 3: Events (Small) -->
+          <div class="masonry-item h-sm" data-gallery-category="events" data-emoji="🥂" data-title="Tuscan Harvest Gala Celebration" data-desc="Annual Autumn wine harvest celebration welcoming winemakers directly from the rolling hills of Montalcino.">
+            <span class="masonry-emoji">🥂</span>
+            <h3 class="masonry-title">Harvest Wine Gala</h3>
+            <span class="masonry-tag">Events &bull; Annual Dinner</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 4: Food (Large) -->
+          <div class="masonry-item h-lg" data-gallery-category="food" data-emoji="🥩" data-title="Prime Fiorentina on Oak Embers" data-desc="32oz dry-aged porterhouse kissed by open wood embers, seasoned with coarse Sicilian sea salt and wild rosemary.">
+            <span class="masonry-emoji">🥩</span>
+            <h3 class="masonry-title">Oak-Fired Fiorentina</h3>
+            <span class="masonry-tag">Cuisine &bull; Charcoal Grill</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 5: Ambiance (Small) -->
+          <div class="masonry-item h-sm" data-gallery-category="ambiance" data-emoji="🍷" data-title="The Grand Sommelier Vault" data-desc="Climate-controlled architectural glass cellar storing over 450 vintage Italian selections and biodynamic varietals.">
+            <span class="masonry-emoji">🍷</span>
+            <h3 class="masonry-title">The Wine Cellar Vault</h3>
+            <span class="masonry-tag">Atmosphere &bull; Wine Cellar</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 6: Events (Medium) -->
+          <div class="masonry-item h-md" data-gallery-category="events" data-emoji="🎉" data-title="Private Anniversary Celebration in Sala Firenze" data-desc="Bespoke floral arrangements and tailored 5-course tasting menu for an intimate 30th anniversary banquet.">
+            <span class="masonry-emoji">🎉</span>
+            <h3 class="masonry-title">Sala Firenze Banquet</h3>
+            <span class="masonry-tag">Events &bull; Private Dining</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 7: Food (Small) -->
+          <div class="masonry-item h-sm" data-gallery-category="food" data-emoji="🍮" data-title="Decadent Mascarpone Tiramisù" data-desc="Layered espresso-soaked ladyfingers, velvety whipped egg yolk zabaglione, and rich dark cocoa dusting.">
+            <span class="masonry-emoji">🍮</span>
+            <h3 class="masonry-title">Signature Tiramisù</h3>
+            <span class="masonry-tag">Cuisine &bull; Artisanal Dolci</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 8: Ambiance (Medium) -->
+          <div class="masonry-item h-md" data-gallery-category="ambiance" data-emoji="🍸" data-title="The Marble Cocktail &amp; Grappa Bar" data-desc="Hand-carved Carrara marble bar top featuring vintage amari bottles, Negroni aging barrels, and craft mixology.">
+            <span class="masonry-emoji">🍸</span>
+            <h3 class="masonry-title">The Aperitivo Lounge</h3>
+            <span class="masonry-tag">Atmosphere &bull; Cocktail Bar</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 9: Events (Large) -->
+          <div class="masonry-item h-lg" data-gallery-category="events" data-emoji="🎻" data-title="Live Acoustic Jazz &amp; Italian Strings" data-desc="Weekly Thursday evening live chamber string trio creating an enchanting soundtrack for candlelit dining.">
+            <span class="masonry-emoji">🎻</span>
+            <h3 class="masonry-title">Jazz &amp; Strings Soirée</h3>
+            <span class="masonry-tag">Events &bull; Live Music</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+          <!-- Item 10: Food (Medium) -->
+          <div class="masonry-item h-md" data-gallery-category="food" data-emoji="🐟" data-title="Whole Mediterranean Branzino Cartoccio" data-desc="Fresh daily catch baked in sealed parchment with sweet cherry tomatoes, capers, garlic, and fresh herbs.">
+            <span class="masonry-emoji">🐟</span>
+            <h3 class="masonry-title">Branzino al Cartoccio</h3>
+            <span class="masonry-tag">Cuisine &bull; Seafood Catch</span>
+            <div class="overlay-zoom">🔍</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal Component -->
+    <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close dialog">&times;</button>
+        <div class="lightbox-emoji" id="lightboxEmoji">🍝</div>
+        <h3 class="lightbox-title" id="lightboxTitle">Tagliolini al Tartufo</h3>
+        <p class="lightbox-desc" id="lightboxDesc">
+          Handmade egg pasta spun in cultured butter with freshly shaved Norcia black truffles.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Discover Italian culinary secrets, wine guides, seasonal recipes, and restaurant news from the chefs at Bella Cucina.">
+  <title>Culinary Blog &amp; News | Bella Cucina - Italian Food &amp; Wine</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Blog &amp; News</span>
+    </nav>
+    <span class="page-hero-eyebrow">Storie di Cucina</span>
+    <h1 class="page-hero-title">Il Giornale di Cucina</h1>
+    <p class="page-hero-desc">Culinary dispatches, sommelier cellar diaries, seasonal recipes, and behind-the-scenes stories.</p>
+  </div>
+</section>
+
+    <!-- Blog Layout Section -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Featured Post: Large Span -->
+        <article class="blog-featured-card fade-in">
+          <div class="visual-placeholder blog-featured-image">
+            <span class="visual-emoji">🥘</span>
+            <span class="visual-tag">Featured Dispatch</span>
+          </div>
+          <div class="blog-featured-content">
+            <div style="display: flex; gap: 0.8rem; align-items: center; margin-bottom: 0.8rem;">
+              <span class="badge badge-gold">Culinary Heritage</span>
+              <span style="font-size: 0.85rem; color: var(--color-text-muted);">October 14, 2026 &bull; 6 min read</span>
+            </div>
+            <h2 style="font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin-bottom: 1rem;">
+              The Sacred Ritual of 12-Hour Ragù: A Tuscan Legacy
+            </h2>
+            <p style="color: var(--color-text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Before the sun rises above Manhattan, Chef Marco’s copper pots are already gently humming. Learn why patience, heirloom juniper berries, and aged Chianti Classico are the true keystones of our legendary wild boar ragù.
+            </p>
+            <div>
+              <a href="#inquiry" class="btn btn-primary">Read Full Story →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Main Grid & Sidebar Layout -->
+        <div class="blog-layout">
+          
+          <!-- 6 Post Grid Left -->
+          <div>
+            <div class="grid-2">
+              
+              <!-- Post 1 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">🍝</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">Masterclass</span>
+                    <span>Oct 02, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    The Secret Behind 30-Yolk Handmade Tagliolini
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    Discover why flour hydration, farm-fresh pasture eggs, and cold granite marble make pasta that melts on the palate.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Post 2 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">🍷</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">Wine &amp; Cellar</span>
+                    <span>Sep 25, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    Demystifying Brunello di Montalcino Terroir
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    Head Sommelier Lorenzo Ferri breaks down the microclimates, galestro soils, and aging laws behind Italy’s most noble wine.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Post 3 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">🍄</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">Ingredients</span>
+                    <span>Sep 18, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    White Truffles: Why Piedmont's Jewels Are Revered
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    From truffle hunting dogs in Alba to our Manhattan dining tables in under 36 hours. The aromatic journey of the tartufo bianco.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Post 4 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">🍸</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">Mixology</span>
+                    <span>Sep 10, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    The Architecture of the Perfect Italian Negroni
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    Balancing bitter, sweet, and botanical notes. Learn why barrel-aging vermouth transforms this classic 1919 Florentine cocktail.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Post 5 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">🌿</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">Provenance</span>
+                    <span>Aug 28, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    First Cold Press: Olive Harvest in Lucca
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    A look inside the 400-year-old family estate that exclusively supplies Bella Cucina with single-estate unfiltered extra virgin olive oil.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+              <!-- Post 6 -->
+              <article class="blog-card fade-in">
+                <div class="visual-placeholder blog-image-box">
+                  <span class="visual-emoji" style="font-size: 2.8rem;">⭐</span>
+                </div>
+                <div class="blog-body">
+                  <div class="blog-meta">
+                    <span class="badge badge-gold">News</span>
+                    <span>Aug 15, 2026</span>
+                  </div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">
+                    Bella Cucina Awarded 2024 Michelin Selection
+                  </h3>
+                  <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.2rem;">
+                    Reflecting on 14 years of uncompromising culinary standards and heartfelt Italian hospitality in New York.
+                  </p>
+                  <a href="#" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent); margin-top: auto;">
+                    Read Article →
+                  </a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Sidebar Right -->
+          <aside class="blog-sidebar">
+            
+            <!-- Widget 1: Search -->
+            <div class="widget fade-in">
+              <h4 class="widget-title">Search Articles</h4>
+              <div style="display: flex; gap: 0.5rem;">
+                <input type="text" class="form-control" placeholder="Search keywords..." style="padding: 0.6rem 0.8rem; font-size: 0.9rem;">
+                <button type="button" class="btn btn-primary btn-sm">Go</button>
+              </div>
+            </div>
+
+            <!-- Widget 2: Categories -->
+            <div class="widget fade-in">
+              <h4 class="widget-title">Categories</h4>
+              <ul class="widget-list">
+                <li><a href="#"><span>Culinary Heritage</span> <span>(8)</span></a></li>
+                <li><a href="#"><span>Wine &amp; Cellar Diaries</span> <span>(12)</span></a></li>
+                <li><a href="#"><span>Seasonal Recipes</span> <span>(9)</span></a></li>
+                <li><a href="#"><span>Chef Marco's Column</span> <span>(6)</span></a></li>
+                <li><a href="#"><span>Restaurant Accolades</span> <span>(5)</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Widget 3: Recent Posts -->
+            <div class="widget fade-in">
+              <h4 class="widget-title">Recent Articles</h4>
+              <ul class="widget-list">
+                <li>
+                  <a href="#" style="display: block;">
+                    <div style="font-size: 0.92rem; font-weight: 600; color: var(--color-primary);">The Sacred Ritual of 12-Hour Ragù</div>
+                    <div style="font-size: 0.75rem; color: var(--color-text-muted);">October 14, 2026</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" style="display: block;">
+                    <div style="font-size: 0.92rem; font-weight: 600; color: var(--color-primary);">30-Yolk Handmade Tagliolini Secrets</div>
+                    <div style="font-size: 0.75rem; color: var(--color-text-muted);">October 02, 2026</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" style="display: block;">
+                    <div style="font-size: 0.92rem; font-weight: 600; color: var(--color-primary);">Demystifying Brunello di Montalcino</div>
+                    <div style="font-size: 0.75rem; color: var(--color-text-muted);">September 25, 2026</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Widget 4: Newsletter Signup -->
+            <div class="widget fade-in" style="background: linear-gradient(135deg, #1c1815 0%, #111111 100%); color: #ffffff; border-color: var(--color-accent);">
+              <h4 class="widget-title" style="color: var(--color-accent); border-color: rgba(200,169,126,0.3);">Join Our Newsletter</h4>
+              <p style="font-size: 0.88rem; color: #d6cebe; margin-bottom: 1.2rem;">
+                Receive seasonal recipes, private wine dinner invites, and culinary essays directly to your inbox.
+              </p>
+              <form id="newsletterForm">
+                <input type="email" class="form-control" placeholder="Your email address..." required style="margin-bottom: 0.8rem; background: #2a241e; color: #ffffff; border-color: #443c33;">
+                <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">Subscribe to Dispatches</button>
+              </form>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

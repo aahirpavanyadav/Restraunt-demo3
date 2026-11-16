@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Give the gift of authentic Italian fine dining. Bella Cucina digital and physical luxury gift cards for any milestone occasion.">
+  <title>Gift Cards | Bella Cucina - Share the Italian Experience</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Gift Cards</span>
+    </nav>
+    <span class="page-hero-eyebrow">Regalo Speciale</span>
+    <h1 class="page-hero-title">Buoni Regalo &bull; Gift Cards</h1>
+    <p class="page-hero-desc">Give the gift of timeless memories, handcrafted pasta, and unforgettable hospitality.</p>
+  </div>
+</section>
+
+    <!-- Gift Card Selection & Live Interactive Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          
+          <!-- Left: Interactive Card Preview -->
+          <div class="fade-in">
+            <span class="section-eyebrow">Live Card Preview</span>
+            <h2 style="margin-bottom: 1.5rem;">The Bella Cucina Culinary Card</h2>
+            
+            <div class="giftcard-preview-wrapper">
+              <div class="giftcard-mockup" id="giftCardMockup">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                  <div>
+                    <span style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: #ffffff; letter-spacing: 1px;">
+                      Bella <span style="color: var(--color-accent);">Cucina</span>
+                    </span>
+                    <div style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--color-accent);">
+                      VIP Culinary Card
+                    </div>
+                  </div>
+                  <div class="giftcard-chip"></div>
+                </div>
+
+                <div style="margin: 1.5rem 0;">
+                  <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; color: #c4bba9;">Stored Value</span>
+                  <div class="giftcard-amount-display" id="previewAmount">$50</div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; font-size: 0.85rem; border-top: 1px solid rgba(200,169,126,0.3); padding-top: 0.8rem;">
+                  <span id="previewRecipient" style="color: #eae5dc; font-weight: 600;">For: Honored Guest</span>
+                  <span style="color: var(--color-accent); font-family: monospace; letter-spacing: 2px;">BC-2026-VAL</span>
+                </div>
+              </div>
+            </div>
+
+            <p style="text-align: center; color: var(--color-text-muted); font-size: 0.9rem;">
+              Valid for dine-in meals, wine pairings, private tasting menus, and culinary masterclasses.
+            </p>
+          </div>
+
+          <!-- Right: Selection & Personalization Form -->
+          <div class="form-card fade-in">
+            <h3 style="margin-bottom: 1.2rem;">Choose Amount &amp; Details</h3>
+
+            <form id="giftcardOrderForm">
+              <!-- Preset Buttons -->
+              <label class="form-label">Select Denomination</label>
+              <div class="amount-buttons">
+                <button type="button" class="amount-btn" data-amount="25">$25</button>
+                <button type="button" class="amount-btn active" data-amount="50">$50</button>
+                <button type="button" class="amount-btn" data-amount="100">$100</button>
+              </div>
+
+              <!-- Custom Amount -->
+              <div class="form-group" style="margin-bottom: 1.2rem;">
+                <label for="customAmountInput" class="form-label">Or Custom Amount ($ USD)</label>
+                <input type="number" id="customAmountInput" class="form-control" placeholder="Enter amount, e.g. 150" min="20" max="2500">
+              </div>
+
+              <!-- Recipient Name -->
+              <div class="form-group" style="margin-bottom: 1.2rem;">
+                <label for="recipientNameInput" class="form-label">Recipient Full Name *</label>
+                <input type="text" id="recipientNameInput" class="form-control" placeholder="e.g. Maria Rossi" required>
+              </div>
+
+              <!-- Recipient Email -->
+              <div class="form-group" style="margin-bottom: 1.2rem;">
+                <label for="recipientEmail" class="form-label">Recipient Email Address *</label>
+                <input type="email" id="recipientEmail" class="form-control" placeholder="e.g. maria@example.com" required>
+              </div>
+
+              <!-- Sender Name -->
+              <div class="form-group" style="margin-bottom: 1.2rem;">
+                <label for="senderName" class="form-label">Your Name (Sender) *</label>
+                <input type="text" id="senderName" class="form-control" placeholder="e.g. Leonardo" required>
+              </div>
+
+              <!-- Personal Message -->
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="recipientMessageInput" class="form-label">Personal Greeting Note</label>
+                <textarea id="recipientMessageInput" class="form-control" placeholder="Buon Appetito! Celebrate your special anniversary with love..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Purchase Gift Card
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Effortless Giving</span>
+          <h2 class="section-title">How It Works in 3 Simple Steps</h2>
+          <p class="section-desc">Delight someone special with an unforgettable Italian dining memory.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Step 1 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">1️⃣</div>
+            <h3>Choose Your Value</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.6rem;">
+              Select from preset amounts or specify any custom balance starting from $20. Suitable for quick lunches or extravagant multi-course feasts.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">2️⃣</div>
+            <h3>Personalize Your Note</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.6rem;">
+              Craft a personalized message, celebrate an anniversary or birthday, and choose whether to send instantly or schedule for a special date.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">3️⃣</div>
+            <h3>Digital or Gift Box</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.6rem;">
+              Receive instant digital delivery with a sleek downloadable PDF or request our signature gold-embossed keepsake presentation box.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (5 Accordion Items) -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Common Questions</span>
+          <h2 class="section-title">Gift Card Policies &amp; FAQs</h2>
+          <p class="section-desc">Everything you need to know about purchasing and redeeming gift cards.</p>
+        </div>
+
+        <div class="accordion fade-in">
+          
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Do Bella Cucina gift cards ever expire?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                No. Bella Cucina gift cards have absolutely no expiration date and carry zero hidden maintenance fees or inactivity deductions.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Can gift cards be used for Chef's Tasting Menus &amp; Wine Pairings?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Yes! Gift cards can be applied toward all food and beverage purchases, including our 5-course Chef’s Tasting Menu, cellar wine pairings, and private dining bookings in Sala Firenze.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>How are digital gift cards delivered to the recipient?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Digital e-gift cards are delivered instantly (or on the scheduled calendar date) via a beautiful, mobile-friendly email containing a secure QR code and printable luxury voucher.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>Can I obtain a physical gold-embossed keepsake card?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Yes. Physical keepsake cards packaged in our signature charcoal-and-gold presentation box are available for in-person collection at our host stand or via complimentary priority courier within the US.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>What should I do if my recipient loses their card code?</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Simply call our hospitality concierge at (212) 555-0192 or email reservations@bellacucina.com with your original purchaser name or transaction email. We will immediately verify and re-issue the remaining balance.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials specifically about Gift Cards -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Gifting Experiences</span>
+          <h2 class="section-title">What Our Gift Recipients Say</h2>
+          <p class="section-desc">Stories from patrons who received the gift of Bella Cucina.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Quote 1 -->
+          <div class="testimonial-card fade-in">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "My colleagues surprised me with a $200 Bella Cucina card for my promotion. My husband and I experienced the Chef's Tasting Menu and it was the highlight of our culinary year!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">🎁</div>
+              <div>
+                <h4 class="author-name">Claudia Martin</h4>
+                <span class="author-role">Corporate Gift Recipient</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="testimonial-card fade-in">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "The physical gold presentation box is breathtaking. Giving this to my parents for their 40th wedding anniversary made them feel like royalty before they even tasted the wine."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">💝</div>
+              <div>
+                <h4 class="author-name">Marcus Vance</h4>
+                <span class="author-role">Anniversary Gift Giver</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quote 3 -->
+          <div class="testimonial-card fade-in">
+            <div class="stars">★★★★★</div>
+            <p class="testimonial-quote">
+              "Instant email delivery saved me when I needed a last-minute birthday gift. Beautiful presentation, effortless redemption, and an extraordinary dinner."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">✨</div>
+              <div>
+                <h4 class="author-name">Rachel Adams</h4>
+                <span class="author-role">Digital Gifter</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

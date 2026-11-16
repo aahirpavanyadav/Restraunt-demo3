@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Explore the seasonal Italian dining menu at Bella Cucina. Handmade artisanal pastas, prime meats, fresh seafood, and decadent desserts.">
+  <title>Menu | Bella Cucina - Fine Italian Dining</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Our Menu</span>
+    </nav>
+    <span class="page-hero-eyebrow">Gastronomia Italiana</span>
+    <h1 class="page-hero-title">Il Nostro Menu</h1>
+    <p class="page-hero-desc">A culinary symphony of seasonal ingredients, age-old Italian craftsmanship, and authentic regional flavors.</p>
+  </div>
+</section>
+
+    <!-- Menu Section with Filters -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">A Taste of Italy</span>
+          <h2 class="section-title">Seasonal À La Carte Offerings</h2>
+          <p class="section-desc">
+            Filter by category to explore our selection of antipasti, handmade pasta, prime mains, desserts, and curated libations.
+          </p>
+          <div style="display: flex; gap: 0.8rem; justify-content: center; margin-top: 1rem; font-size: 0.85rem;">
+            <span><strong class="badge-dietary v">V</strong> Vegetarian</span>
+            <span><strong class="badge-dietary gf">GF</strong> Gluten-Free</span>
+            <span><strong class="badge-dietary s">S</strong> Spicy</span>
+          </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs fade-in">
+          <button class="tab-btn active" data-filter="all">All Dishes</button>
+          <button class="tab-btn" data-filter="appetizers">Appetizers</button>
+          <button class="tab-btn" data-filter="pasta">Pasta</button>
+          <button class="tab-btn" data-filter="mains">Mains</button>
+          <button class="tab-btn" data-filter="desserts">Desserts</button>
+          <button class="tab-btn" data-filter="drinks">Drinks &amp; Wine</button>
+        </div>
+
+        <!-- Menu Grid (18 Items) -->
+        <div class="grid-3 menu-grid">
+          
+          <!-- Item 1: Appetizer -->
+          <article class="dish-card fade-in" data-category="appetizers">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🥩</span>
+              <span class="badge badge-gold dish-badge">Antipasti</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Carpaccio di Manzo</h3>
+                <span class="dish-price">$22</span>
+              </div>
+              <p class="dish-desc">
+                Thinly shaved prime beef tenderloin, baby wild arugula, shaved 24-month Parmigiano-Reggiano, caper berries, and lemon-infused Tuscan olive oil.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Cold Antipasti</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Appetizer -->
+          <article class="dish-card fade-in" data-category="appetizers">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🧀</span>
+              <span class="badge badge-gold dish-badge">Antipasti</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Burrata Pugliese</h3>
+                <span class="dish-price">$20</span>
+              </div>
+              <p class="dish-desc">
+                Creamy Pugliese burrata, heirloom cherry tomatoes, basil pesto genovese, aged Modena balsamic glaze, served with toasted sourdough crostini.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge-dietary gf">GF</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Appetizer -->
+          <article class="dish-card fade-in" data-category="appetizers">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🦑</span>
+              <span class="badge badge-gold dish-badge">Antipasti</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Calamari Fritti Croccanti</h3>
+                <span class="dish-price">$24</span>
+              </div>
+              <p class="dish-desc">
+                Crispy semolina-crusted Monterey Bay calamari and zucchini chips, served with spicy Calabrian chili aioli and grilled Amalfi lemon wedges.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary s">S</span>
+                <span class="badge badge-gold">Crisp Fried</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Pasta -->
+          <article class="dish-card fade-in" data-category="pasta">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍝</span>
+              <span class="badge badge-gold dish-badge">Primi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Tagliolini al Tartufo</h3>
+                <span class="dish-price">$38</span>
+              </div>
+              <p class="dish-desc">
+                Hand-rolled egg tagliolini spun in cultured mountain butter, cracked pepper, and finished with fresh shaved black truffles from Norcia.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge badge-gold">House Specialty</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Pasta -->
+          <article class="dish-card fade-in" data-category="pasta">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🐗</span>
+              <span class="badge badge-gold dish-badge">Primi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Pappardelle al Cinghiale</h3>
+                <span class="dish-price">$34</span>
+              </div>
+              <p class="dish-desc">
+                Wide ribbon pasta bathed in a rich, 12-hour slow-braised wild boar ragù scented with juniper berries, Chianti Classico, and rosemary.
+              </p>
+              <div class="dish-footer">
+                <span class="badge badge-gold">Tuscan Classic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Pasta -->
+          <article class="dish-card fade-in" data-category="pasta">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🥟</span>
+              <span class="badge badge-gold dish-badge">Primi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Ravioli di Zucca</h3>
+                <span class="dish-price">$30</span>
+              </div>
+              <p class="dish-desc">
+                Butternut squash and ricotta ravioli tossed in browned sage butter, toasted Piedmontese hazelnuts, and finished with aged pecorino.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge badge-gold">Handmade</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Pasta -->
+          <article class="dish-card fade-in" data-category="pasta">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🦪</span>
+              <span class="badge badge-gold dish-badge">Primi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Spaghetti alle Vongole</h3>
+                <span class="dish-price">$32</span>
+              </div>
+              <p class="dish-desc">
+                Artisanal Gragnano spaghetti tossed with fresh Manila clams, white wine, garlic, flat-leaf parsley, and a kick of red peperoncino.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary s">S</span>
+                <span class="badge badge-gold">Coastal Italy</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Mains -->
+          <article class="dish-card fade-in" data-category="mains">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🥩</span>
+              <span class="badge badge-gold dish-badge">Secondi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Bistecca Fiorentina</h3>
+                <span class="dish-price">$56</span>
+              </div>
+              <p class="dish-desc">
+                Prime dry-aged 32oz porterhouse steak grilled over oak fire, dressed with coarse Maldon salt, rosemary oil, and served with cannellini beans.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Oak Charred</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Mains -->
+          <article class="dish-card fade-in" data-category="mains">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🐟</span>
+              <span class="badge badge-gold dish-badge">Secondi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Branzino al Cartoccio</h3>
+                <span class="dish-price">$44</span>
+              </div>
+              <p class="dish-desc">
+                Mediterranean sea bass baked in parchment with cherry tomatoes, Taggiasca olives, capers, fresh thyme, and white Pinot Grigio reduction.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Fresh Catch</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: Mains -->
+          <article class="dish-card fade-in" data-category="mains">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍖</span>
+              <span class="badge badge-gold dish-badge">Secondi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Ossobuco alla Milanese</h3>
+                <span class="dish-price">$48</span>
+              </div>
+              <p class="dish-desc">
+                Fork-tender braised veal shank served over saffron-scented carnaroli risotto, topped with aromatic lemon-garlic gremolata.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Lombardy Classic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 11: Mains -->
+          <article class="dish-card fade-in" data-category="mains">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍗</span>
+              <span class="badge badge-gold dish-badge">Secondi</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Pollo al Mattone</h3>
+                <span class="dish-price">$36</span>
+              </div>
+              <p class="dish-desc">
+                Crispy organic brick-pressed chicken marinated in lemon zest, rosemary, garlic, and Calabrian chili flakes, served with fingerling potatoes.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge-dietary s">S</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 12: Desserts -->
+          <article class="dish-card fade-in" data-category="desserts">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍮</span>
+              <span class="badge badge-gold dish-badge">Dolci</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Tiramisù Tradizionale</h3>
+                <span class="dish-price">$16</span>
+              </div>
+              <p class="dish-desc">
+                Savoiardi soaked in strong espresso and Marsala wine, layered with airy whipped mascarpone cream and dusted with dark cocoa powder.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge badge-gold">Grandmother's Recipe</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 13: Desserts -->
+          <article class="dish-card fade-in" data-category="desserts">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍓</span>
+              <span class="badge badge-gold dish-badge">Dolci</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Panna Cotta ai Frutti</h3>
+                <span class="dish-price">$15</span>
+              </div>
+              <p class="dish-desc">
+                Silky Madagascar vanilla bean panna cotta served with a macerated wild raspberry and blackberry compote with fresh mint sprigs.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge-dietary gf">GF</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 14: Desserts -->
+          <article class="dish-card fade-in" data-category="desserts">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🥐</span>
+              <span class="badge badge-gold dish-badge">Dolci</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Cannoli Siciliani</h3>
+                <span class="dish-price">$14</span>
+              </div>
+              <p class="dish-desc">
+                Crispy hand-fried shells stuffed with sweet sheep’s milk ricotta, candied orange peel, dark chocolate pearls, and Bronte pistachios.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge badge-gold">Sicilian Treat</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 15: Desserts -->
+          <article class="dish-card fade-in" data-category="desserts">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍫</span>
+              <span class="badge badge-gold dish-badge">Dolci</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Torta al Cioccolato</h3>
+                <span class="dish-price">$16</span>
+              </div>
+              <p class="dish-desc">
+                Warm flourless Valrhona dark chocolate cake with a molten truffle center, accompanied by house-churned fior di latte gelato.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary v">V</span>
+                <span class="badge-dietary gf">GF</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 16: Drinks -->
+          <article class="dish-card fade-in" data-category="drinks">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍸</span>
+              <span class="badge badge-gold dish-badge">Cocktail</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Negroni Riserva</h3>
+                <span class="dish-price">$18</span>
+              </div>
+              <p class="dish-desc">
+                Malfy Italian gin, Campari bitter, and Carpano Antica Formula sweet vermouth aged 30 days in charred American oak casks with orange oils.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Aged In-House</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 17: Drinks -->
+          <article class="dish-card fade-in" data-category="drinks">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍹</span>
+              <span class="badge badge-gold dish-badge">Aperitivo</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Aperol Spritz Veneziano</h3>
+                <span class="dish-price">$16</span>
+              </div>
+              <p class="dish-desc">
+                Prosecco Superiore DOCG, Aperol aperitivo, sparkling San Pellegrino mineral water, garnished with Castelvetrano olive and fresh orange.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Venetian Classic</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 18: Drinks -->
+          <article class="dish-card fade-in" data-category="drinks">
+            <div class="dish-image-box">
+              <span class="dish-emoji">🍷</span>
+              <span class="badge badge-gold dish-badge">Vino</span>
+            </div>
+            <div class="dish-body">
+              <div class="dish-header">
+                <h3 class="dish-name">Brunello di Montalcino '18</h3>
+                <span class="dish-price">$28 / Glass</span>
+              </div>
+              <p class="dish-desc">
+                100% Sangiovese Grosso from Val di Suga estate. Aromas of wild berries, leather, violets, and smooth, velvety tannins.
+              </p>
+              <div class="dish-footer">
+                <span class="badge-dietary gf">GF</span>
+                <span class="badge badge-gold">Sommelier Pick</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Special Menu Callout: Chef's Tasting Menu -->
+        <div class="tasting-callout fade-in">
+          <span class="badge badge-gold" style="margin-bottom: 0.8rem;">Exclusive Culinary Experience</span>
+          <h3>Chef's Tasting Menu – $95 / Person</h3>
+          <p class="tasting-price">5 Multi-Course Sensory Symphony</p>
+          <p style="max-width: 680px; margin: 0 auto 1.5rem auto; color: #dcd4c6;">
+            Surrender your evening to Chef Marco Rossi. Five exquisite courses engineered around today's freshest arrivals from Italy and local farms. Optional sommelier reserve wine pairing available for $65.
+          </p>
+          <div class="btn-group btn-group-center">
+            <a href="reservation.html" class="btn btn-primary">Reserve Tasting Experience</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

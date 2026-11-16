@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Find Bella Cucina in New York. Operating hours, interactive location map, transit options, valet parking, and nearby Manhattan landmarks.">
+  <title>Location &amp; Hours | Bella Cucina - Plan Your Visit</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Location &amp; Hours</span>
+    </nav>
+    <span class="page-hero-eyebrow">Dove Siamo</span>
+    <h1 class="page-hero-title">Location &amp; Dining Hours</h1>
+    <p class="page-hero-desc">Nestled in the historic heart of Chelsea &amp; Midtown Manhattan. We look forward to welcoming you.</p>
+  </div>
+</section>
+
+    <!-- Large Map Placeholder Section -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container">
+        <div class="map-placeholder fade-in" style="min-height: 440px; background: #f4eee6;">
+          <div style="font-size: 4.5rem; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));">📍</div>
+          <h2 style="margin-bottom: 0.5rem; color: var(--color-primary);">Bella Cucina Manhattan</h2>
+          <p style="font-size: 1.15rem; color: #444444; max-width: 600px; font-weight: 600; margin-bottom: 0.3rem;">
+            128 Olive Garden Lane, New York, NY 10001
+          </p>
+          <span style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 1.5rem; display: block;">
+            Corner of West 28th Street &amp; 7th Avenue
+          </span>
+
+          <div class="btn-group btn-group-center">
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              Open in Google Maps ↗
+            </a>
+            <a href="https://maps.apple.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+              Open in Apple Maps ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hours Table & Quick Contact -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: start;">
+          
+          <!-- Hours Table Left -->
+          <div class="card fade-in">
+            <span class="section-eyebrow">Weekly Schedule</span>
+            <h3 style="margin-bottom: 0.5rem;">Hours of Operation</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+              Kitchen closes 45 minutes prior to listed closing times. Bar remains open late.
+            </p>
+
+            <table class="hours-table">
+              <tbody>
+                <!-- Monday (day 1) -->
+                <tr data-day="1">
+                  <td><strong>Monday</strong></td>
+                  <td style="text-align: right;">12:00 PM – 10:00 PM</td>
+                </tr>
+                <!-- Tuesday (day 2) -->
+                <tr data-day="2">
+                  <td><strong>Tuesday</strong></td>
+                  <td style="text-align: right;">12:00 PM – 10:00 PM</td>
+                </tr>
+                <!-- Wednesday (day 3) -->
+                <tr data-day="3">
+                  <td><strong>Wednesday</strong></td>
+                  <td style="text-align: right;">12:00 PM – 10:00 PM</td>
+                </tr>
+                <!-- Thursday (day 4) -->
+                <tr data-day="4">
+                  <td><strong>Thursday</strong></td>
+                  <td style="text-align: right;">12:00 PM – 10:00 PM</td>
+                </tr>
+                <!-- Friday (day 5) -->
+                <tr data-day="5">
+                  <td><strong>Friday</strong></td>
+                  <td style="text-align: right;">11:00 AM – 11:00 PM</td>
+                </tr>
+                <!-- Saturday (day 6) -->
+                <tr data-day="6">
+                  <td><strong>Saturday</strong></td>
+                  <td style="text-align: right;">11:00 AM – 11:00 PM</td>
+                </tr>
+                <!-- Sunday (day 0) -->
+                <tr data-day="0">
+                  <td><strong>Sunday</strong></td>
+                  <td style="text-align: right;">12:00 PM – 9:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border); font-size: 0.85rem; color: var(--color-text-muted);">
+              <strong>* Holiday Schedule:</strong> Open on Thanksgiving, Christmas Eve, New Year's Eve, and Easter with special tasting menus.
+            </div>
+          </div>
+
+          <!-- Quick Arrival Info Right -->
+          <div class="fade-in">
+            <span class="section-eyebrow">Planning Your Visit</span>
+            <h3 style="margin-bottom: 1rem;">Direct Contact &amp; Reservations</h3>
+            <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">
+              For immediate reservations, special table requests, or dietary accommodations:
+            </p>
+
+            <div class="card card-dark" style="margin-bottom: 1.5rem;">
+              <h4 style="color: var(--color-accent); margin-bottom: 0.8rem;">Maître D' Direct Desk</h4>
+              <p style="color: #ded6c8; font-size: 0.95rem; margin-bottom: 0.5rem;">
+                📞 <strong>Direct Line:</strong> <a href="tel:2125550192" style="color: #ffffff;">(212) 555-0192</a>
+              </p>
+              <p style="color: #ded6c8; font-size: 0.95rem; margin-bottom: 1.2rem;">
+                ✉️ <strong>Concierge Email:</strong> <a href="mailto:reservations@bellacucina.com" style="color: var(--color-accent);">reservations@bellacucina.com</a>
+              </p>
+              <a href="reservation.html" class="btn btn-primary btn-sm" style="width: 100%;">
+                Book Your Table Online →
+              </a>
+            </div>
+
+            <div class="card">
+              <h4>Private Dining Rooms</h4>
+              <p style="color: var(--color-text-muted); font-size: 0.92rem; margin-top: 0.4rem;">
+                Looking for exclusive room buyouts or private wine tastings for groups of 10 to 55?
+              </p>
+              <a href="events.html" style="font-weight: 700; font-size: 0.85rem; color: var(--color-accent);">
+                Explore Sala Firenze &amp; Private Events →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Here: 3 Transport Cards -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Transportation</span>
+          <h2 class="section-title">Getting to Bella Cucina</h2>
+          <p class="section-desc">Conveniently accessible by subway, car, and city transit.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- By Subway -->
+          <div class="card fade-in">
+            <div class="icon-box">🚇</div>
+            <h3>By Subway</h3>
+            <ul style="color: var(--color-text-muted); font-size: 0.92rem; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>1 Train:</strong> Exit at 28th Street Station (2-minute walk west).</li>
+              <li><strong>A, C, E, 1, 2, 3 Trains:</strong> 34th Street Penn Station (4-minute walk south).</li>
+              <li><strong>N, Q, R, W Trains:</strong> 28th St &amp; Broadway (6-minute walk west).</li>
+            </ul>
+          </div>
+
+          <!-- By Car -->
+          <div class="card fade-in">
+            <div class="icon-box">🚗</div>
+            <h3>By Car &amp; Taxi</h3>
+            <ul style="color: var(--color-text-muted); font-size: 0.92rem; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>From West Side:</strong> Take West Side Highway (Route 9A) to West 28th Street.</li>
+              <li><strong>From East Side:</strong> Take FDR Drive exit at 34th Street and cross westbound.</li>
+              <li><strong>Taxis &amp; Rideshare:</strong> Set destination to "128 Olive Garden Lane".</li>
+            </ul>
+          </div>
+
+          <!-- By Bus -->
+          <div class="card fade-in">
+            <div class="icon-box">🚌</div>
+            <h3>By Bus</h3>
+            <ul style="color: var(--color-text-muted); font-size: 0.92rem; margin-top: 0.8rem; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><strong>M7 Bus:</strong> Drops directly at 7th Avenue &amp; West 28th Street.</li>
+              <li><strong>M20 Bus:</strong> Stops at 7th Avenue &amp; West 27th Street.</li>
+              <li><strong>M34-SBS Crosstown:</strong> 34th Street bus stop (6-minute walk).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parking Info Section -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div class="fade-in">
+            <span class="section-eyebrow">Valet &amp; Garages</span>
+            <h2 style="margin-bottom: 1.2rem;">Seamless Arrival &amp; Valet Parking</h2>
+            <p>
+              We strive to make your arrival as relaxing as your meal. Complimentary curbside valet service is offered directly outside our front entrance for all evening dinner guests beginning at 5:00 PM nightly.
+            </p>
+            <p>
+              For patrons arriving for lunch or preferring self-parking, our verified partner garage—<strong>Icon Parking Garage</strong>—is located directly adjacent at 134 Olive Garden Lane. Bring your parking ticket to our host stand for 2 hours of validated parking discount.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+              <span class="badge badge-gold" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🅿️ Valet Daily From 5:00 PM</span>
+              <span class="badge badge-gold" style="padding: 0.5rem 1rem; font-size: 0.85rem;">🎫 Validated Garage Discount</span>
+            </div>
+          </div>
+
+          <div class="visual-placeholder fade-in" style="min-height: 280px;">
+            <span class="visual-emoji">🚘</span>
+            <h3 class="visual-title">Valet Portico Entrance</h3>
+            <span class="visual-tag">Curbside Host Service &bull; 128 Olive Garden Lane</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nearby Landmarks Section -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">In the Neighborhood</span>
+          <h2 class="section-title">Nearby Manhattan Landmarks</h2>
+          <p class="section-desc">Bella Cucina is ideally situated within walking distance of New York’s top destinations.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🏙️</div>
+            <h4 style="color: #ffffff;">Empire State Building</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.3rem;">
+              5 blocks east (8-minute stroll along 34th St)
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🏟️</div>
+            <h4 style="color: #ffffff;">Madison Square Garden</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.3rem;">
+              4 blocks north &bull; Perfect for pre-show dinners
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🌿</div>
+            <h4 style="color: #ffffff;">The High Line</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.3rem;">
+              3 blocks west (Entrance on 30th &amp; 10th Ave)
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.6rem;">🏛️</div>
+            <h4 style="color: #ffffff;">Flatiron Building</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.3rem;">
+              6 blocks southeast near Madison Square Park
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

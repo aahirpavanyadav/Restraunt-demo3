@@ -1,0 +1,21 @@
+{
+  "name": "lumina-restaurant-demo",
+  "version": "1.0.0",
+  "description": "High-end modern restaurant web demo for fine dining, bistro, or hospitality clients",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000 --directory .",
+    "dev": "python3 -m http.server 3000 --directory .",
+    "serve": "npx serve -l 3000 ."
+  },
+  "keywords": [
+    "restaurant",
+    "web-demo",
+    "fine-dining",
+    "hospitality",
+    "table-reservation",
+    "culinary-menu"
+  ],
+  "author": "Antigravity Studio",
+  "license": "MIT"
+}

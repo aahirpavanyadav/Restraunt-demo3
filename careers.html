@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Build your culinary or hospitality career at Bella Cucina. Explore open positions for chefs, captains, bartenders, and hosts in New York.">
+  <title>Careers | Bella Cucina - Join Our Family</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner with Headline -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Careers</span>
+    </nav>
+    <span class="page-hero-eyebrow">Lavora Con Noi</span>
+    <h1 class="page-hero-title">Join Our Family</h1>
+    <p class="page-hero-desc">Craft your future with Manhattan’s premier Italian culinary sanctuary. Passion, pride, and craftsmanship.</p>
+  </div>
+</section>
+
+    <!-- Culture & Benefits Section (4 Cards) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Our Team Culture</span>
+          <h2 class="section-title">Why Build Your Career At Bella Cucina</h2>
+          <p class="section-desc">We invest deeply in our people, fostering a respectful, supportive, and inspiring workplace.</p>
+        </div>
+
+        <div class="grid-4">
+          <!-- Benefit 1 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">🩺</div>
+            <h4>Healthcare &amp; Wellness</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Comprehensive medical, dental, and vision insurance for full-time team members, plus mental health support.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">⚖️</div>
+            <h4>Balanced Shifts</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Predictable shift scheduling, fair tipping pools, guaranteed consecutive days off, and paid time off (PTO).
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">🍝</div>
+            <h4>Family Staff Meals</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Delicious, nutritious hot meals prepared twice daily by our culinary brigade, plus endless fresh Italian espresso.
+            </p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="card text-center fade-in">
+            <div class="icon-box" style="margin: 0 auto 1.2rem auto;">📈</div>
+            <h4>Growth &amp; Mentorship</h4>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+              Direct mentorship from Chef Marco Rossi, sommelier WSET certification sponsorships, and rapid internal promotion paths.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions Section (5 Positions) -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Opportunities</span>
+          <h2 class="section-title">Current Open Positions</h2>
+          <p class="section-desc">Join our front-of-house or kitchen brigade. Click apply to submit your details.</p>
+        </div>
+
+        <div class="job-table-wrapper fade-in">
+          <table class="job-table positions-table">
+            <thead>
+              <tr>
+                <th>Position Title</th>
+                <th>Department</th>
+                <th>Employment Type</th>
+                <th>Compensation</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- Position 1 -->
+              <tr>
+                <td data-label="Position">
+                  <strong>Head Waiter / Captain</strong>
+                  <div style="font-size: 0.8rem; color: var(--color-text-muted);">Lead tableside service and wine guidance</div>
+                </td>
+                <td data-label="Department">Front of House</td>
+                <td data-label="Type"><span class="badge badge-gold">Full-Time</span></td>
+                <td data-label="Compensation">\$28 – \$38 / hr + Gratuities</td>
+                <td data-label="Action"><a href="#applicationSection" class="btn btn-primary btn-sm">Apply Now</a></td>
+              </tr>
+
+              <!-- Position 2 -->
+              <tr>
+                <td data-label="Position">
+                  <strong>Sous Chef — Primi &amp; Sauté</strong>
+                  <div style="font-size: 0.8rem; color: var(--color-text-muted);">Oversee daily fresh pasta execution &amp; sauces</div>
+                </td>
+                <td data-label="Department">Culinary / Kitchen</td>
+                <td data-label="Type"><span class="badge badge-gold">Full-Time</span></td>
+                <td data-label="Compensation">\$68,000 – \$78,000 / yr</td>
+                <td data-label="Action"><a href="#applicationSection" class="btn btn-primary btn-sm">Apply Now</a></td>
+              </tr>
+
+              <!-- Position 3 -->
+              <tr>
+                <td data-label="Position">
+                  <strong>Lead Bartender &amp; Mixologist</strong>
+                  <div style="font-size: 0.8rem; color: var(--color-text-muted);">Aperitivo cocktails, barrel-aging, and Italian spirits</div>
+                </td>
+                <td data-label="Department">Bar &amp; Beverage</td>
+                <td data-label="Type"><span class="badge badge-gold">Full-Time / Part-Time</span></td>
+                <td data-label="Compensation">\$22 / hr + Tips</td>
+                <td data-label="Action"><a href="#applicationSection" class="btn btn-primary btn-sm">Apply Now</a></td>
+              </tr>
+
+              <!-- Position 4 -->
+              <tr>
+                <td data-label="Position">
+                  <strong>Guest Host / Hostess</strong>
+                  <div style="font-size: 0.8rem; color: var(--color-text-muted);">Welcome patrons, manage seating reservations</div>
+                </td>
+                <td data-label="Department">Guest Services</td>
+                <td data-label="Type"><span class="badge badge-gold">Part-Time</span></td>
+                <td data-label="Compensation">\$21 – \$24 / hr</td>
+                <td data-label="Action"><a href="#applicationSection" class="btn btn-primary btn-sm">Apply Now</a></td>
+              </tr>
+
+              <!-- Position 5 -->
+              <tr>
+                <td data-label="Position">
+                  <strong>Kitchen Steward &amp; Dishwasher</strong>
+                  <div style="font-size: 0.8rem; color: var(--color-text-muted);">Maintain kitchen cleanliness and cookware sanitation</div>
+                </td>
+                <td data-label="Department">Culinary Operations</td>
+                <td data-label="Type"><span class="badge badge-gold">Full-Time</span></td>
+                <td data-label="Compensation">\$20 – \$22 / hr</td>
+                <td data-label="Action"><a href="#applicationSection" class="btn btn-primary btn-sm">Apply Now</a></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="section" id="applicationSection">
+      <div class="container container-narrow">
+        <div class="form-card fade-in">
+          <div class="text-center" style="margin-bottom: 2rem;">
+            <span class="section-eyebrow">Application Portal</span>
+            <h2>Submit Your Application</h2>
+            <p style="color: var(--color-text-muted);">
+              Take the first step toward a rewarding culinary journey at Bella Cucina.
+            </p>
+          </div>
+
+          <form id="careerForm">
+            <div class="form-grid">
+              
+              <!-- Name -->
+              <div class="form-group">
+                <label for="applicantName" class="form-label">Full Name *</label>
+                <input type="text" id="applicantName" class="form-control" placeholder="e.g. Matteo Rossi" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="applicantEmail" class="form-label">Email Address *</label>
+                <input type="email" id="applicantEmail" class="form-control" placeholder="e.g. matteo@example.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="applicantPhone" class="form-label">Phone Number *</label>
+                <input type="tel" id="applicantPhone" class="form-control" placeholder="e.g. (212) 555-0192" required>
+              </div>
+
+              <!-- Position Applied -->
+              <div class="form-group">
+                <label for="applicantPosition" class="form-label">Position Applied For *</label>
+                <select id="applicantPosition" class="form-control" required>
+                  <option value="" disabled selected>Select position...</option>
+                  <option value="Head Waiter / Captain">Head Waiter / Captain</option>
+                  <option value="Sous Chef - Primi &amp; Sauté">Sous Chef — Primi &amp; Sauté</option>
+                  <option value="Lead Bartender &amp; Mixologist">Lead Bartender &amp; Mixologist</option>
+                  <option value="Guest Host / Hostess">Guest Host / Hostess</option>
+                  <option value="Kitchen Steward &amp; Dishwasher">Kitchen Steward &amp; Dishwasher</option>
+                  <option value="General Consideration">General Culinary Consideration</option>
+                </select>
+              </div>
+
+              <!-- Resume Upload -->
+              <div class="form-group full-width">
+                <label for="applicantResume" class="form-label">Resume / CV (PDF or DOCX)</label>
+                <input type="file" id="applicantResume" class="form-control" accept=".pdf,.doc,.docx">
+                <small style="color: var(--color-text-muted); font-size: 0.8rem; margin-top: 0.3rem;">
+                  Max file size: 5MB. You can also paste experience below.
+                </small>
+              </div>
+
+              <!-- Cover Letter / Note -->
+              <div class="form-group full-width">
+                <label for="applicantLetter" class="form-label">Cover Letter / Tell Us About Your Experience</label>
+                <textarea id="applicantLetter" class="form-control" placeholder="Share your past culinary experience, why you are drawn to Italian cuisine, and your availability..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width" style="margin-top: 0.5rem;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                  Send Job Application
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

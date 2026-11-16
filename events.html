@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Host your private celebration, corporate gala, or wedding reception at Bella Cucina. Bespoke Italian catering and private dining suites in NYC.">
+  <title>Events &amp; Catering | Bella Cucina - Private Celebrations</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Events &amp; Catering</span>
+    </nav>
+    <span class="page-hero-eyebrow">Celebrazioni &amp; Banchetti</span>
+    <h1 class="page-hero-title">Private Events &amp; Catering</h1>
+    <p class="page-hero-desc">Unforgettable celebrations, bespoke banquets, and premier Italian off-site catering services.</p>
+  </div>
+</section>
+
+    <!-- Upcoming Events Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Calendar of Experiences</span>
+          <h2 class="section-title">Upcoming Culinary Galas</h2>
+          <p class="section-desc">Join us for exclusive winemaker dinners, seasonal tastings, and culinary masterclasses.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Event 1 -->
+          <article class="event-card fade-in">
+            <div class="event-date-box">
+              <span class="event-month">Oct</span>
+              <span class="event-day">24</span>
+              <span class="event-year">2026</span>
+            </div>
+            <div class="event-details">
+              <span class="badge badge-gold" style="align-self: flex-start; margin-bottom: 0.5rem;">Wine Dinner</span>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Tuscan Truffle &amp; Barolo Gala</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+                A 6-course white truffle tasting menu paired with rare library vintages from Marchesi di Barolo.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                <span style="font-weight: 700; color: var(--color-primary);">$185 / Person</span>
+                <a href="#inquirySection" class="btn btn-primary btn-sm">Reserve Seat</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 2 -->
+          <article class="event-card fade-in">
+            <div class="event-date-box">
+              <span class="event-month">Nov</span>
+              <span class="event-day">12</span>
+              <span class="event-year">2026</span>
+            </div>
+            <div class="event-details">
+              <span class="badge badge-gold" style="align-self: flex-start; margin-bottom: 0.5rem;">Masterclass</span>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">The Art of Pasta Rolling</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+                Hands-on masterclass with Chef Marco Rossi. Learn ancient kneading techniques followed by a 3-course lunch.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                <span style="font-weight: 700; color: var(--color-primary);">$140 / Person</span>
+                <a href="#inquirySection" class="btn btn-primary btn-sm">Reserve Seat</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 3 -->
+          <article class="event-card fade-in">
+            <div class="event-date-box">
+              <span class="event-month">Dec</span>
+              <span class="event-day">31</span>
+              <span class="event-year">2026</span>
+            </div>
+            <div class="event-details">
+              <span class="badge badge-gold" style="align-self: flex-start; margin-bottom: 0.5rem;">Holiday Gala</span>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Capodanno: Italian NYE Soirée</h3>
+              <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.2rem;">
+                Ring in the New Year with live jazz, Dom Pérignon toast, caviar, handmade agnolotti, and dancing.
+              </p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                <span style="font-weight: 700; color: var(--color-primary);">$225 / Person</span>
+                <a href="#inquirySection" class="btn btn-primary btn-sm">Reserve Seat</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catering Services -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Exquisite Hospitality</span>
+          <h2 class="section-title">Bespoke Catering &amp; Event Services</h2>
+          <p class="section-desc">From our private Manhattan salons to your chosen venue, we deliver perfection.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Service 1: Corporate -->
+          <div class="card fade-in">
+            <div class="icon-box">💼</div>
+            <h3>Corporate Entertaining</h3>
+            <p style="color: var(--color-text-muted); margin: 0.8rem 0 1.5rem 0;">
+              Executive board dinners, product launches, and client appreciation banquets. Complete with AV presentation capabilities and dedicated concierge.
+            </p>
+            <a href="#inquirySection" class="btn btn-dark btn-sm">Get Corporate Quote →</a>
+          </div>
+
+          <!-- Service 2: Wedding -->
+          <div class="card fade-in">
+            <div class="icon-box">💍</div>
+            <h3>Weddings &amp; Rehearsals</h3>
+            <p style="color: var(--color-text-muted); margin: 0.8rem 0 1.5rem 0;">
+              Romantic Italian wedding celebrations, rehearsal dinners, and champagne receptions designed with custom floral arrangements and tailored menus.
+            </p>
+            <a href="#inquirySection" class="btn btn-dark btn-sm">Get Wedding Quote →</a>
+          </div>
+
+          <!-- Service 3: Private Party -->
+          <div class="card fade-in">
+            <div class="icon-box">🥂</div>
+            <h3>Private Soirées &amp; Milestones</h3>
+            <p style="color: var(--color-text-muted); margin: 0.8rem 0 1.5rem 0;">
+              Birthdays, anniversaries, retirement feasts, and family reunions. Enjoy intimate candlelit rooms with private bar and sommelier pairings.
+            </p>
+            <a href="#inquirySection" class="btn btn-dark btn-sm">Get Party Quote →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venue Stats -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Venue Specifications</span>
+          <h2 class="section-title">Historic Space, Modern Luxury</h2>
+          <p class="section-desc">Engineered for seamless hospitality and pristine acoustics.</p>
+        </div>
+
+        <div class="stats-grid fade-in">
+          <div class="stat-item">
+            <div class="stat-number">200</div>
+            <div class="stat-label">Max Guest Capacity (Standing)</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4,200</div>
+            <div class="stat-label">Square Feet Of Event Space</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4K &amp; Hi-Fi</div>
+            <div class="stat-label">Bose Acoustics &amp; Laser AV</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">Valet</div>
+            <div class="stat-label">Dedicated On-Site Valet Service</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Inquiry Form -->
+    <section class="section" id="inquirySection">
+      <div class="container container-narrow">
+        <div class="form-card fade-in">
+          <div class="text-center" style="margin-bottom: 2rem;">
+            <span class="section-eyebrow">Plan Your Occasion</span>
+            <h2>Event &amp; Catering Inquiry</h2>
+            <p style="color: var(--color-text-muted);">
+              Tell us about your envisioned gathering. Our private events coordinator will contact you within 24 hours.
+            </p>
+          </div>
+
+          <form id="eventInquiryForm">
+            <div class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="eventContactName" class="form-label">Organizer Name *</label>
+                <input type="text" id="eventContactName" class="form-control" placeholder="e.g. Elena Rostova" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="eventEmail" class="form-label">Email Address *</label>
+                <input type="email" id="eventEmail" class="form-control" placeholder="e.g. elena@company.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="eventPhone" class="form-label">Phone Number *</label>
+                <input type="tel" id="eventPhone" class="form-control" placeholder="e.g. (212) 555-0192" required>
+              </div>
+
+              <!-- Event Type -->
+              <div class="form-group">
+                <label for="eventType" class="form-label">Event Type *</label>
+                <select id="eventType" class="form-control" required>
+                  <option value="" disabled selected>Select event category...</option>
+                  <option value="corporate">Corporate Dinner / Gala</option>
+                  <option value="wedding">Wedding / Rehearsal Dinner</option>
+                  <option value="birthday">Birthday / Anniversary Milestone</option>
+                  <option value="wine_tasting">Private Sommelier Wine Tasting</option>
+                  <option value="offsite_catering">Off-site Bespoke Catering</option>
+                  <option value="other">Other Special Event</option>
+                </select>
+              </div>
+
+              <!-- Event Date -->
+              <div class="form-group">
+                <label for="eventDate" class="form-label">Target Date *</label>
+                <input type="date" id="eventDate" class="form-control" required>
+              </div>
+
+              <!-- Estimated Guests -->
+              <div class="form-group">
+                <label for="eventGuests" class="form-label">Estimated Guest Count *</label>
+                <input type="number" id="eventGuests" class="form-control" placeholder="e.g. 45" min="10" max="250" required>
+              </div>
+
+              <!-- Estimated Budget -->
+              <div class="form-group full-width">
+                <label for="eventBudget" class="form-label">Estimated Budget (USD)</label>
+                <select id="eventBudget" class="form-control">
+                  <option value="" disabled selected>Select estimated budget range...</option>
+                  <option value="2500-5000">$2,500 – $5,000</option>
+                  <option value="5000-10000">$5,000 – $10,000</option>
+                  <option value="10000-25000">$10,000 – $25,000</option>
+                  <option value="25000+">$25,000+</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group full-width">
+                <label for="eventMessage" class="form-label">Event Details, Dietary &amp; Ambience Wishes</label>
+                <textarea id="eventMessage" class="form-control" placeholder="Provide any details about your event, preferred seating styles, audio/visual needs, or wine pairings..."></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="form-group full-width" style="margin-top: 0.5rem;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                  Submit Proposal Request
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Reserve a table at Bella Cucina. Book your Italian fine dining experience online in Manhattan, New York.">
+  <title>Table Reservations | Bella Cucina - Fine Italian Dining</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Reservations</span>
+    </nav>
+    <span class="page-hero-eyebrow">Prenota un Tavolo</span>
+    <h1 class="page-hero-title">Book Your Table</h1>
+    <p class="page-hero-desc">Join us for an extraordinary culinary journey. Reserve online for immediate dining confirmation.</p>
+  </div>
+</section>
+
+    <!-- Reservation Form Section -->
+    <section class="section">
+      <div class="container container-narrow">
+        <div class="form-card fade-in">
+          <div class="text-center" style="margin-bottom: 2rem;">
+            <span class="section-eyebrow">Online Table Booking</span>
+            <h2>Secure Your Reservation</h2>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+              For immediate inquiries or parties larger than 20, please contact our concierge at <a href="tel:2125550192">(212) 555-0192</a>.
+            </p>
+          </div>
+
+          <form id="reservationForm">
+            <div class="form-grid">
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="resName" class="form-label">Full Name *</label>
+                <input type="text" id="resName" class="form-control" placeholder="e.g. Alessandro Conti" required>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="resEmail" class="form-label">Email Address *</label>
+                <input type="email" id="resEmail" class="form-control" placeholder="e.g. guest@example.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="resPhone" class="form-label">Phone Number *</label>
+                <input type="tel" id="resPhone" class="form-control" placeholder="e.g. (212) 555-0192" required>
+              </div>
+
+              <!-- Date -->
+              <div class="form-group">
+                <label for="resDate" class="form-label">Reservation Date *</label>
+                <input type="date" id="resDate" class="form-control" required>
+              </div>
+
+              <!-- Time Slot -->
+              <div class="form-group">
+                <label for="resTime" class="form-label">Dining Time *</label>
+                <select id="resTime" class="form-control" required>
+                  <option value="" disabled selected>Select dining time...</option>
+                  <optgroup label="Lunch Service">
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">1:00 PM</option>
+                    <option value="13:30">1:30 PM</option>
+                    <option value="14:00">2:00 PM</option>
+                    <option value="14:30">2:30 PM</option>
+                  </optgroup>
+                  <optgroup label="Dinner Service">
+                    <option value="17:00">5:00 PM</option>
+                    <option value="17:30">5:30 PM</option>
+                    <option value="18:00">6:00 PM</option>
+                    <option value="18:30">6:30 PM</option>
+                    <option value="19:00">7:00 PM</option>
+                    <option value="19:30">7:30 PM</option>
+                    <option value="20:00">8:00 PM</option>
+                    <option value="20:30">8:30 PM</option>
+                    <option value="21:00">9:00 PM</option>
+                    <option value="21:30">9:30 PM</option>
+                    <option value="22:00">10:00 PM</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Party Size -->
+              <div class="form-group">
+                <label for="resGuests" class="form-label">Party Size *</label>
+                <select id="resGuests" class="form-control" required>
+                  <option value="" disabled selected>Select number of guests...</option>
+                  <option value="1">1 Guest (Solo Diner)</option>
+                  <option value="2">2 Guests (Table for 2)</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                  <option value="6">6 Guests</option>
+                  <option value="7">7 Guests</option>
+                  <option value="8">8 Guests</option>
+                  <option value="9">9 Guests</option>
+                  <option value="10">10 Guests</option>
+                  <option value="11">11 Guests</option>
+                  <option value="12">12 Guests</option>
+                  <option value="14">14 Guests</option>
+                  <option value="16">16 Guests</option>
+                  <option value="18">18 Guests</option>
+                  <option value="20">20 Guests (Large Group)</option>
+                </select>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="form-group full-width">
+                <label for="resRequests" class="form-label">Special Dietary Requirements or Celebrations</label>
+                <textarea id="resRequests" class="form-control" placeholder="Anniversary, birthday, booth preference, allergies, or wine recommendations..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group full-width" style="margin-top: 0.5rem;">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                  Confirm Table Reservation
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining Policies -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Guest Guidelines</span>
+          <h2 class="section-title">Dining Policies &amp; Etiquette</h2>
+          <p class="section-desc">To ensure an exquisite experience for all patrons, please review our policies.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Policy 1 -->
+          <div class="card fade-in">
+            <div class="icon-box">⏱️</div>
+            <h3>Cancellation Policy</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.8rem;">
+              We hold reserved tables for 15 minutes past scheduled booking time. For cancellations or party adjustments, please notify us at least 24 hours in advance to avoid a \$25 per guest fee.
+            </p>
+          </div>
+
+          <!-- Policy 2 -->
+          <div class="card fade-in">
+            <div class="icon-box">👔</div>
+            <h3>Dress Code</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.8rem;">
+              We invite guests to embrace upscale smart casual attire. We kindly request gentleman refrain from athletic shorts, flip-flops, and gym wear in the main dining rooms.
+            </p>
+          </div>
+
+          <!-- Policy 3 -->
+          <div class="card fade-in">
+            <div class="icon-box">👶</div>
+            <h3>Children Welcome</h3>
+            <p style="color: var(--color-text-muted); margin-top: 0.8rem;">
+              Families are cherished at Bella Cucina. We gladly provide high chairs and our culinary brigade happily prepares custom fresh pasta portions suited for young gourmets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Private Dining CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner-gold fade-in" style="background: linear-gradient(135deg, #1f1b17 0%, #111111 100%); color: #ffffff; border: 2px solid var(--color-accent);">
+          <h2 style="color: var(--color-accent);">Private Dining &amp; Milestone Celebrations</h2>
+          <p style="color: #ded6c8; max-width: 700px;">
+            Planning a private corporate dinner, rehearsal dinner, or intimate wine tasting? Our private 'Sala Firenze' accommodates up to 55 guests with bespoke menus and dedicated sommelier service.
+          </p>
+          <div class="btn-group btn-group-center" style="margin-top: 1.5rem;">
+            <a href="events.html" class="btn btn-primary btn-lg">Explore Private Dining &amp; Events</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Speak with Event Director</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

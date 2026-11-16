@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FDFAF6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#18140F" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Meet Chef Marco Rossi and the celebrated culinary brigade behind Bella Cucina's authentic Italian fine dining in New York.">
+  <title>Meet the Chef | Bella Cucina - Culinary Artistry</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+    <!-- Prevent dark mode flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('bc-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
+  <div class="header-container">
+
+    <!-- Logo -->
+    <a href="index.html" class="brand">
+      <div class="brand-icon">BC</div>
+      <div class="brand-text">
+        <span class="brand-name">Bella Cucina</span>
+        <span class="brand-tagline">Ristorante Italiano</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav with Dropdowns -->
+    <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+      <a href="index.html" class="nav-item">Home</a>
+
+      <!-- Dropdown: Dining -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Dining <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="menu.html" class="dropdown-link">
+            <span class="dropdown-icon">🍽️</span>
+            <span>
+              <strong>Our Menu</strong>
+              <small>Starters, pasta, mains &amp; more</small>
+            </span>
+          </a>
+          <a href="chef.html" class="dropdown-link">
+            <span class="dropdown-icon">👨‍🍳</span>
+            <span>
+              <strong>Meet the Chef</strong>
+              <small>Chef Marco Rossi &amp; team</small>
+            </span>
+          </a>
+          <a href="gallery.html" class="dropdown-link">
+            <span class="dropdown-icon">🖼️</span>
+            <span>
+              <strong>Gallery</strong>
+              <small>Food, ambiance &amp; events</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: Experience -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          Experience <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="events.html" class="dropdown-link">
+            <span class="dropdown-icon">🎉</span>
+            <span>
+              <strong>Events &amp; Catering</strong>
+              <small>Private parties &amp; corporate</small>
+            </span>
+          </a>
+          <a href="giftcards.html" class="dropdown-link">
+            <span class="dropdown-icon">🎁</span>
+            <span>
+              <strong>Gift Cards</strong>
+              <small>Give the gift of dining</small>
+            </span>
+          </a>
+          <a href="blog.html" class="dropdown-link">
+            <span class="dropdown-icon">📰</span>
+            <span>
+              <strong>Blog &amp; News</strong>
+              <small>Stories from our kitchen</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dropdown: About -->
+      <div class="nav-dropdown">
+        <button class="nav-item nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+          About <span class="dropdown-arrow">▾</span>
+        </button>
+        <div class="dropdown-panel">
+          <a href="about.html" class="dropdown-link">
+            <span class="dropdown-icon">📖</span>
+            <span>
+              <strong>Our Story</strong>
+              <small>14 years of Italian passion</small>
+            </span>
+          </a>
+          <a href="careers.html" class="dropdown-link">
+            <span class="dropdown-icon">💼</span>
+            <span>
+              <strong>Careers</strong>
+              <small>Join our family</small>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <a href="contact.html" class="nav-item">Contact</a>
+      <a href="location.html" class="nav-item">Location</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="header-actions">
+      <a href="tel:+12125550192" class="header-phone">📞 (212) 555-0192</a>
+      <a href="reservation.html" class="btn-reserve">Reserve a Table</a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-header">
+        <span class="drawer-brand">Bella Cucina</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="index.html" class="drawer-link">Home</a>
+        <div class="drawer-section-title">Dining</div>
+        <a href="menu.html" class="drawer-link drawer-sub">🍽️ Our Menu</a>
+        <a href="chef.html" class="drawer-link drawer-sub">👨‍🍳 Meet the Chef</a>
+        <a href="gallery.html" class="drawer-link drawer-sub">🖼️ Gallery</a>
+        <div class="drawer-section-title">Experience</div>
+        <a href="events.html" class="drawer-link drawer-sub">🎉 Events &amp; Catering</a>
+        <a href="giftcards.html" class="drawer-link drawer-sub">🎁 Gift Cards</a>
+        <a href="blog.html" class="drawer-link drawer-sub">📰 Blog &amp; News</a>
+        <div class="drawer-section-title">About</div>
+        <a href="about.html" class="drawer-link drawer-sub">📖 Our Story</a>
+        <a href="careers.html" class="drawer-link drawer-sub">💼 Careers</a>
+        <a href="contact.html" class="drawer-link">Contact</a>
+        <a href="location.html" class="drawer-link">Location &amp; Hours</a>
+      </nav>
+      <div class="drawer-footer">
+        <a href="reservation.html" class="btn-reserve btn-reserve-full">Reserve a Table</a>
+        <div class="drawer-contact">
+          <span>📞 (212) 555-0192</span>
+          <span>📍 128 Olive Garden Lane, NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+</header>
+
+  <main id="main-content">
+    <!-- Hero Banner -->
+    <section class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Meet the Chef</span>
+    </nav>
+    <span class="page-hero-eyebrow">Arte Culinaria</span>
+    <h1 class="page-hero-title">Meet Master Chef Marco Rossi</h1>
+    <p class="page-hero-desc">A lifelong devotion to Italian culinary heritage, unyielding technique, and genuine warmth.</p>
+  </div>
+</section>
+
+    <!-- Head Chef Profile Section -->
+    <section class="section">
+      <div class="container">
+        <div class="chef-hero-card fade-in">
+          <!-- Visual Box Left -->
+          <div class="visual-placeholder chef-visual">
+            <div class="visual-emoji">👨‍🍳</div>
+            <h3 class="visual-title">Chef Marco Rossi</h3>
+            <span class="visual-tag">Executive Chef &amp; Founder</span>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.8rem; max-width: 280px;">
+              Born in Florence, trained across Modena, Milan, and Paris. Over 28 years dedicated to Italian gastronomy.
+            </p>
+          </div>
+
+          <!-- Bio Right -->
+          <div>
+            <span class="section-eyebrow">Master of the Craft</span>
+            <h2 style="margin-bottom: 1.2rem;">Culinary Passion Passed Through Generations</h2>
+            <p>
+              Chef Marco Rossi was raised in a farmhouse just outside Florence where mornings began with gathering fresh eggs, foraging wild herbs in the Tuscan hills, and rolling pasta beside his grandmother, Nonna Teresa.
+            </p>
+            <p>
+              After graduating from the prestigious Culinary Institute of Florence and working in three-star Michelin establishments across Italy and France, Marco arrived in New York with a singular ambition: to create an unpretentious, world-class sanctuary where diners taste the true soul of Italy without compromise.
+            </p>
+
+            <h4 style="margin: 1.5rem 0 0.8rem 0; color: var(--color-primary);">Chef Marco's Signature Creations:</h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                <span style="color: var(--color-accent); font-weight: 700;">✻</span>
+                <strong>Tagliolini al Tartufo</strong> — 30-egg yolk pasta, mountain butter, shaved black truffles
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                <span style="color: var(--color-accent); font-weight: 700;">✻</span>
+                <strong>Bistecca alla Fiorentina</strong> — 45-day dry aged porterhouse seared over oak coals
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                <span style="color: var(--color-accent); font-weight: 700;">✻</span>
+                <strong>Ravioli di Zucca con Salvia</strong> — Roasted squash, amaretto crumble, browned sage
+              </li>
+              <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.95rem;">
+                <span style="color: var(--color-accent); font-weight: 700;">✻</span>
+                <strong>Risotto all'Amarone</strong> — Carnaroli rice, Valpolicella Amarone, roasted bone marrow
+              </li>
+            </ul>
+
+            <div style="margin-top: 2rem;">
+              <a href="reservation.html" class="btn btn-primary">Taste Chef Marco's Menu →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Philosophy Section with Quote -->
+        <div class="chef-quote-box fade-in">
+          <blockquote>
+            “True Italian cooking does not invent novelty for the sake of vanity. It listens to the whisper of the seasons, respects the ancient sacred roots of the soil, and treats every seated guest as a soul deserving warmth, comfort, and enduring memory.”
+          </blockquote>
+          <p style="text-align: right; font-weight: 700; color: var(--color-accent); margin: 0;">
+            — Chef Marco Rossi, Executive Chef &amp; Proprietor
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chef Team: 3 Sous Chefs -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">The Kitchen Brigade</span>
+          <h2 class="section-title">The Masters Behind Every Dish</h2>
+          <p class="section-desc">Our kitchen operates with military precision and familial affection.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Sous Chef 1 -->
+          <div class="card fade-in text-center">
+            <div class="visual-placeholder" style="height: 180px; margin-bottom: 1.5rem;">
+              <span style="font-size: 3rem;">👨‍🍳</span>
+              <span class="visual-tag" style="margin-top: 0.5rem;">Cucina &bull; Primi</span>
+            </div>
+            <h3>Matteo Bellini</h3>
+            <span class="badge badge-gold" style="margin: 0.4rem 0 1rem 0;">Chef de Cuisine</span>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem;">
+              A Bologna native who leads our pasta laboratory. Matteo oversees every millimeter of pasta dough kneaded, extruded, and folded every morning.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); margin-top: 0.8rem;">
+              Specialty: 12-Hour Ragù &amp; Stuffed Pastas
+            </div>
+          </div>
+
+          <!-- Sous Chef 2 -->
+          <div class="card fade-in text-center">
+            <div class="visual-placeholder" style="height: 180px; margin-bottom: 1.5rem;">
+              <span style="font-size: 3rem;">👩‍🍳</span>
+              <span class="visual-tag" style="margin-top: 0.5rem;">Pasticceria</span>
+            </div>
+            <h3>Giulia Romano</h3>
+            <span class="badge badge-gold" style="margin: 0.4rem 0 1rem 0;">Executive Pastry Chef</span>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem;">
+              Trained in Turin, the confectionery capital of Italy. Giulia balances time-honored cannoli and tiramisù with delicate modern chocolate artistry.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); margin-top: 0.8rem;">
+              Specialty: Valrhona Dolci &amp; Gelato Artigianale
+            </div>
+          </div>
+
+          <!-- Sous Chef 3 -->
+          <div class="card fade-in text-center">
+            <div class="visual-placeholder" style="height: 180px; margin-bottom: 1.5rem;">
+              <span style="font-size: 3rem;">🍷</span>
+              <span class="visual-tag" style="margin-top: 0.5rem;">Cantina</span>
+            </div>
+            <h3>Lorenzo Ferri</h3>
+            <span class="badge badge-gold" style="margin: 0.4rem 0 1rem 0;">Head Sommelier</span>
+            <p style="color: var(--color-text-muted); font-size: 0.92rem;">
+              Certified Master Sommelier hailing from Verona. Lorenzo personally visits micro-vineyards in Piedmont and Sicily to curate our 450-bottle wine program.
+            </p>
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); margin-top: 0.8rem;">
+              Specialty: Rare Brunellos &amp; Natural Wines
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards & Appearances -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Critical Acclaim</span>
+          <h2 class="section-title">Awards &amp; Media Appearances</h2>
+          <p class="section-desc">Chef Marco's culinary philosophy celebrated by international publications.</p>
+        </div>
+
+        <div class="grid-4">
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🏅</div>
+            <h4 style="color: #ffffff;">James Beard Foundation</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.4rem;">
+              Best Chef: Mid-Atlantic Nominee (2022, 2023)
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">📺</div>
+            <h4 style="color: #ffffff;">Chef's Table Italy</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.4rem;">
+              Featured Guest in Season 4 Episode: "Florentine Roots in New York"
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">🍴</div>
+            <h4 style="color: #ffffff;">Gambero Rosso</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.4rem;">
+              Top Italian Restaurant Worldwide Honor (Tre Forchette Rating)
+            </p>
+          </div>
+
+          <div class="card card-dark text-center fade-in">
+            <div style="font-size: 2.2rem; margin-bottom: 0.8rem;">📖</div>
+            <h4 style="color: #ffffff;">Food Arts Magazine</h4>
+            <p style="font-size: 0.85rem; color: #b5ad9e; margin-top: 0.4rem;">
+              Cover Story: "The Reinvention of the Italian Trattoria"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consistent Footer -->
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-name">Bella Cucina</div>
+        <div class="footer-brand-tagline">Ristorante Italiano · Est. 2010</div>
+        <p class="footer-desc">Crafting authentic Italian memories in the heart of New York City since 2010. Every dish tells a story of passion, heritage, and love.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="TripAdvisor">🏆</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Explore</div>
+        <ul class="footer-links">
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="chef.html">Meet the Chef</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events &amp; Catering</a></li>
+          <li><a href="blog.html">Blog &amp; News</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="giftcards.html">Gift Cards</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="location.html">Location &amp; Hours</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-heading">Visit Us</div>
+        <div class="footer-contact-item">📍 128 Olive Garden Lane<br>New York, NY 10001</div>
+        <div class="footer-contact-item">📞 <a href="tel:+12125550192">(212) 555-0192</a></div>
+        <div class="footer-contact-item">✉️ <a href="mailto:reservations@bellacucina.com">reservations@bellacucina.com</a></div>
+        <div class="footer-contact-item">🕐 Mon–Thu: 12pm–10pm<br>Fri–Sat: 11am–11pm<br>Sun: 12pm–9pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2024 Bella Cucina. All rights reserved. Made with <span class="accent">♥</span> in New York.</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

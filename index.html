@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERDANT | Table, Hearth & Olive Garden | Clean Aesthetic Demo</title>
+  <meta name="description" content="Sunlit Mediterranean hospitality, wood-fired seasonal harvests, and biodynamic natural wines at VERDANT. Clean, organic culinary dining.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Google Fonts: Fraunces & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAF7F2',
+            forest: {
+              DEFAULT: '#274337',
+              dark: '#1C2A24',
+              light: '#EBF1ED'
+            },
+            terracotta: {
+              DEFAULT: '#D06746',
+              light: '#F5ECE8',
+              hover: '#BF5736'
+            },
+            sage: '#537765',
+            sand: '#F3EFEA',
+            gold: '#C69A4F'
+          },
+          fontFamily: {
+            display: ['"Fraunces"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "VERDANT Table & Olive Garden",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+    "servesCuisine": ["California-Mediterranean", "Wood-Fired", "Farm-to-Table"],
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "742 Cypress Avenue",
+      "addressLocality": "Garden District",
+      "addressRegion": "CA",
+      "postalCode": "94107",
+      "addressCountry": "US"
+    },
+    "telephone": "+14158904210"
+  }
+  </script>
+</head>
+<body class="bg-[#FAF7F2] text-[#1C2A24] antialiased selection:bg-[#D06746] selection:text-white">
+
+  <!-- ==================== TOP TICKER BAR ==================== -->
+  <div class="bg-[#274337] text-white py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div id="live-hours-pill" class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 status-pulse"></span>
+        <span class="font-medium text-emerald-100">Open Today • Hearth Dinner from 5:00 PM</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-emerald-100/80">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+          742 Cypress Avenue, Garden District
+        </span>
+        <a href="tel:+14158904210" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+          +1 (415) 890-4210
+        </a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-800/80 text-amber-200 text-[11px] font-bold tracking-wide uppercase border border-amber-300/20">
+          🔥 Prime Tables Open for Tonight
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#1C2A24]/10 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-[#EBF1ED] border border-[#274337]/20 flex items-center justify-center text-[#274337] font-display text-xl font-bold group-hover:scale-105 transition-transform">
+          V
+        </div>
+        <div>
+          <span class="font-display text-2xl font-bold tracking-wide text-[#1C2A24] block leading-none">VERDANT</span>
+          <span class="text-[10px] uppercase font-bold tracking-[0.25em] text-[#D06746] block mt-1">Table & Garden</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-bold text-[#1C2A24]/80">
+        <a href="#philosophy" class="hover:text-[#D06746] transition-colors">Our Ethos</a>
+        <a href="#menu" class="hover:text-[#D06746] transition-colors">Seasonal Menu</a>
+        <a href="#spaces" class="hover:text-[#D06746] transition-colors">Atmospheric Spaces</a>
+        <a href="#calculator" class="hover:text-[#D06746] transition-colors">Private Events</a>
+        <a href="#hours" class="hover:text-[#D06746] transition-colors">Hours & Concierge</a>
+      </nav>
+
+      <!-- Action Area -->
+      <div class="flex items-center gap-3">
+        <!-- Tasting Slate / Cart Button -->
+        <button 
+          class="open-cart-trigger relative p-2.5 rounded-full bg-white border border-[#1C2A24]/10 text-[#1C2A24] hover:border-[#D06746] transition-all shadow-xs"
+          title="View Tasting Slate"
+        >
+          <svg class="w-5 h-5 text-[#274337]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span id="cart-badge" class="hidden absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D06746] text-white font-bold text-[10px] flex items-center justify-center shadow-md">0</span>
+        </button>
+
+        <!-- Book Table CTA -->
+        <button 
+          class="open-reservation-trigger btn-terracotta hidden sm:flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          Reserve Table
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#1C2A24]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-white border-b border-[#1C2A24]/10 px-6 py-6 space-y-4">
+      <a href="#philosophy" class="block text-sm font-bold text-[#1C2A24] hover:text-[#D06746]">Our Ethos</a>
+      <a href="#menu" class="block text-sm font-bold text-[#1C2A24] hover:text-[#D06746]">Seasonal Menu</a>
+      <a href="#spaces" class="block text-sm font-bold text-[#1C2A24] hover:text-[#D06746]">Atmospheric Spaces</a>
+      <a href="#calculator" class="block text-sm font-bold text-[#1C2A24] hover:text-[#D06746]">Private Events & Calculator</a>
+      <a href="#hours" class="block text-sm font-bold text-[#1C2A24] hover:text-[#D06746]">Hours & Concierge</a>
+      <div class="pt-4 border-t border-[#1C2A24]/10">
+        <button class="open-reservation-trigger btn-terracotta w-full py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider">
+          Book Table Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-20 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <!-- Left Column: Editorial Headline & Instant Booking Card -->
+      <div class="lg:col-span-7 space-y-8">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EBF1ED] border border-[#274337]/10 text-xs font-bold text-[#274337] uppercase tracking-wider">
+          <span>🌿</span> 100% Regenerative Organic Kitchen • Michelin Guide 2025
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-[#1C2A24] leading-[1.1]">
+          Honest Cooking. <br>
+          <span class="italic text-[#D06746] font-normal">Rooted in Nature.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-[#607269] max-w-xl leading-relaxed">
+          Wood-fired Mediterranean flavors, line-caught coastal fish, and seasonal harvests from 48 regional growers, paired with natural living wines.
+        </p>
+
+        <!-- Quick Table Booker Card (High Conversion for Clients) -->
+        <div class="bg-white p-5 sm:p-6 rounded-3xl border border-[#1C2A24]/10 shadow-lg max-w-xl">
+          <div class="flex items-center justify-between pb-4 border-b border-[#1C2A24]/5 mb-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#1C2A24] flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#D06746]"></span>
+              Direct Table Finder
+            </span>
+            <span class="text-xs text-[#607269]">Instant Instant Confirmation</span>
+          </div>
+
+          <form id="hero-quick-booker" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-[#607269] mb-1">Guests</label>
+              <select class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2.5 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="8+">8+ Group</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-[#607269] mb-1">Date</label>
+              <input type="date" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]" value="2026-11-17">
+            </div>
+
+            <div>
+              <label class="block text-[11px] font-bold uppercase tracking-wider text-[#607269] mb-1">Service Time</label>
+              <select class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2.5 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+                <option value="18:00">6:00 PM (Garden)</option>
+                <option value="19:30" selected>7:30 PM (Prime)</option>
+                <option value="20:45">8:45 PM (Lounge)</option>
+              </select>
+            </div>
+
+            <div class="sm:col-span-3 pt-1">
+              <button type="submit" class="btn-terracotta w-full py-3 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                <span>Check Table Availability</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Social Proof Stats -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-[#1C2A24]/10">
+          <div>
+            <div class="font-display text-2xl font-bold text-[#274337]">100%</div>
+            <div class="text-xs text-[#607269] mt-0.5">Organic Harvest</div>
+          </div>
+          <div>
+            <div class="font-display text-2xl font-bold text-[#274337]">48+</div>
+            <div class="text-xs text-[#607269] mt-0.5">Local Growers</div>
+          </div>
+          <div>
+            <div class="font-display text-2xl font-bold text-[#274337]">Zero</div>
+            <div class="text-xs text-[#607269] mt-0.5">Kitchen Waste</div>
+          </div>
+          <div>
+            <div class="font-display text-2xl font-bold text-[#D06746]">4.9 ★</div>
+            <div class="text-xs text-[#607269] mt-0.5">950+ Reviews</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual Atmosphere Collage -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <img 
+            src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1000&q=80" 
+            alt="Chef plating seasonal dish" 
+            class="w-full h-[520px] object-cover"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1C2A24]/60 via-transparent to-transparent"></div>
+          
+          <div class="absolute bottom-6 left-6 right-6 text-white">
+            <span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/20 backdrop-blur-md">
+              Chef Camille Laurent
+            </span>
+            <p class="font-display text-xl font-bold mt-2">
+              "We cook with what the soil yields today, not what sits in a freezer."
+            </p>
+          </div>
+        </div>
+
+        <!-- Floating Accent Pill -->
+        <div class="absolute -top-6 -left-6 hidden sm:flex items-center gap-3 p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-[#1C2A24]/10">
+          <div class="w-10 h-10 rounded-full bg-[#EBF1ED] flex items-center justify-center text-[#274337]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+          </div>
+          <div class="text-xs">
+            <div class="font-bold text-[#1C2A24]">Wood-Fired Hearth</div>
+            <div class="text-[#607269]">Aged Olive & White Oak</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CULINARY ETHOS & SOURCING ==================== -->
+  <section id="philosophy" class="py-20 bg-white border-y border-[#1C2A24]/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#D06746]">• Sourcing & Philosophy •</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-[#1C2A24]">
+          The Rhythm of Soil & Embers
+        </h2>
+        <p class="text-sm text-[#607269]">Every morning, crates arrive from coastal farms, biodynamic vineyards, and regenerative fisheries along the Pacific.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Pillar 1 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#1C2A24]/5 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-[#1C2A24]">Regenerative Growers</h3>
+          <p class="text-sm text-[#607269] leading-relaxed">
+            We partner with 48 certified heirloom family farms practicing no-till agriculture, preserving nutrient density and pure terroir flavor.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#1C2A24]/5 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-[#1C2A24]">Live Hearth Cooking</h3>
+          <p class="text-sm text-[#607269] leading-relaxed">
+            No gas ranges. Our kitchen harnesses radiant heat from fallen olive wood and white oak, searing whole fish and caramelizing root vegetables.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#1C2A24]/5 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-[#1C2A24]">Living Natural Cellar</h3>
+          <p class="text-sm text-[#607269] leading-relaxed">
+            Curated low-intervention, unfiltered, and orange wines from small European and Californian vintners working without synthetic additives.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE SEASONAL MENU ==================== -->
+  <section id="menu" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+      <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#D06746]">• Seasonal Carte •</span>
+      <h2 class="font-display text-3xl sm:text-5xl font-bold text-[#1C2A24]">
+        Crafted by Earth & Flame
+      </h2>
+      <p class="text-sm sm:text-base text-[#607269]">
+        Click any culinary plate to inspect provenance, allergen profiles, and natural wine pairings. Add items to your tasting slate to pre-order or save favorites.
+      </p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="space-y-6 mb-12">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-[#1C2A24]/10 shadow-sm">
+        
+        <!-- Live Search -->
+        <div class="relative w-full sm:w-80">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search plates, foraged herbs, wines..." 
+            class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-4 py-2.5 pl-10 text-xs font-medium text-[#1C2A24] placeholder-[#607269] focus:outline-none focus:border-[#D06746]"
+          />
+          <svg class="w-4 h-4 text-[#607269] absolute left-3.5 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+
+        <!-- Dietary Filter -->
+        <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+          <label for="dietary-select" class="text-xs font-bold text-[#607269] whitespace-nowrap">Dietary Style:</label>
+          <select 
+            id="dietary-select" 
+            class="bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]"
+          >
+            <option value="all">All Culinary Dishes</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Plant-Based / Vegan</option>
+            <option value="Gluten Free">Gluten-Free</option>
+            <option value="Chef Camille's Pick">Chef's Highlights</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Categories Pills -->
+      <div id="category-filter-pills" class="flex flex-wrap items-center justify-center gap-2">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+
+    <!-- Dishes Grid -->
+    <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Rendered by app.js -->
+    </div>
+
+  </section>
+
+  <!-- ==================== ATMOSPHERIC SPACES GALLERY ==================== -->
+  <section id="spaces" class="py-24 bg-white border-y border-[#1C2A24]/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#D06746]">• The Environment •</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-[#1C2A24]">Distinctive Dining Sanctuaries</h2>
+        <p class="text-sm text-[#607269]">Designed with natural limestone, living botanical vines, and warm European travertine.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Space 1 -->
+        <div class="clean-card overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Sunlit Atrium" class="zoom-img w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#D06746]">Zone 01</span>
+            <h3 class="font-display text-lg font-bold text-[#1C2A24] mt-1">Sunlit Atrium Greenhouse</h3>
+            <p class="text-xs text-[#607269] mt-2">Draped in hanging jasmine, glass conservatory roof, and gentle radiance.</p>
+          </div>
+        </div>
+
+        <!-- Space 2 -->
+        <div class="clean-card overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="Olive Courtyard" class="zoom-img w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#D06746]">Zone 02</span>
+            <h3 class="font-display text-lg font-bold text-[#1C2A24] mt-1">Century Olive Courtyard</h3>
+            <p class="text-xs text-[#607269] mt-2">Alfresco terrace shaded by ancient olive trees with evening radiant heaters.</p>
+          </div>
+        </div>
+
+        <!-- Space 3 -->
+        <div class="clean-card overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Hearth Counter" class="zoom-img w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#D06746]">Zone 03</span>
+            <h3 class="font-display text-lg font-bold text-[#1C2A24] mt-1">The Hearth Counter</h3>
+            <p class="text-xs text-[#607269] mt-2">Front-row seats adjacent to the live olive-wood embers and prep stations.</p>
+          </div>
+        </div>
+
+        <!-- Space 4 -->
+        <div class="clean-card overflow-hidden group">
+          <div class="relative h-72 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Cellar Lounge" class="zoom-img w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#D06746]">Zone 04</span>
+            <h3 class="font-display text-lg font-bold text-[#1C2A24] mt-1">The Cellar Salon</h3>
+            <p class="text-xs text-[#607269] mt-2">Intimate room surrounded by 900+ bottles of biodynamic and natural wines.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE EVENT & CATERING CALCULATOR ==================== -->
+  <section id="calculator" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-[#1C2A24]/10 shadow-lg">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#D06746]">• Private Gatherings & Galas •</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-[#1C2A24]">
+            Plan Your Celebration <br>
+            <span class="italic text-[#D06746]">with Live Estimates.</span>
+          </h2>
+          <p class="text-sm text-[#607269] leading-relaxed">
+            Whether an intimate anniversary dinner, garden wedding celebration, or corporate executive retreat, our private dining concierge coordinates tailored multi-course hearth menus.
+          </p>
+
+          <!-- Interactive Guest Count Slider -->
+          <div class="p-6 rounded-2xl bg-[#FAF7F2] border border-[#1C2A24]/5 space-y-3">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-bold uppercase tracking-wider text-[#1C2A24]">Estimated Guest Count</label>
+              <span id="event-guest-count" class="font-display text-xl font-bold text-[#D06746]">30 Guests</span>
+            </div>
+            <input 
+              type="range" 
+              id="event-guest-slider" 
+              min="10" 
+              max="120" 
+              step="5" 
+              value="30" 
+              class="w-full accent-[#D06746] cursor-pointer"
+            />
+            <div class="flex justify-between text-[11px] text-[#607269]">
+              <span>10 (Intimate)</span>
+              <span>60 (Half Garden)</span>
+              <span>120 (Full Buyout)</span>
+            </div>
+          </div>
+
+          <!-- Menu Tier Selector -->
+          <div>
+            <label class="text-xs font-bold uppercase tracking-wider text-[#1C2A24] block mb-2">Select Culinary Experience Tier</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button data-tier="85" class="tier-pill p-3 rounded-xl border border-[#1C2A24]/10 text-left hover:border-[#D06746] transition-all bg-white">
+                <div class="text-xs font-bold text-[#1C2A24]">Crudo & Spritz</div>
+                <div class="text-[11px] text-[#607269] mt-0.5">$85 / guest</div>
+              </button>
+              <button data-tier="135" class="tier-pill p-3 rounded-xl border border-[#274337] bg-[#274337] text-white text-left transition-all">
+                <div class="text-xs font-bold">3-Course Hearth</div>
+                <div class="text-[11px] text-emerald-200 mt-0.5">$135 / guest</div>
+              </button>
+              <button data-tier="195" class="tier-pill p-3 rounded-xl border border-[#1C2A24]/10 text-left hover:border-[#D06746] transition-all bg-white">
+                <div class="text-xs font-bold text-[#1C2A24]">Chef's Tasting</div>
+                <div class="text-[11px] text-[#607269] mt-0.5">$195 / guest</div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculated Live Preview Card -->
+        <div class="lg:col-span-6 bg-[#FAF7F2] p-8 rounded-3xl border border-[#1C2A24]/10 space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-[#1C2A24]/10">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#274337]">Estimated Event Summary</span>
+            <span class="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 text-[#274337]">Real-Time Calculation</span>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <span class="text-xs text-[#607269] block mb-1">Recommended Event Atmosphere</span>
+              <div id="event-space-recommendation" class="font-display text-xl font-bold text-[#1C2A24]">The Sunlit Atrium Greenhouse</div>
+            </div>
+
+            <div class="pt-2 border-t border-[#1C2A24]/5">
+              <span class="text-xs text-[#607269] block mb-1">Estimated Investment (Inc. Service & Tax)</span>
+              <div id="event-cost-estimate" class="font-display text-4xl font-bold text-[#D06746]">$5,063</div>
+              <span class="text-[11px] text-[#607269] mt-1 block">Includes seasonal floral centerpieces, dedicated sommelier, and personalized menus.</span>
+            </div>
+          </div>
+
+          <button 
+            onclick="window.VerdantApp.openReservationModal({ occasion: 'Private Gathering' })"
+            class="btn-forest w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2"
+          >
+            <span>Inquire for This Event Date</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CRITICAL ACCLAIM & PRESS ==================== -->
+  <section class="py-20 bg-white border-y border-[#1C2A24]/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#D06746]">• Acclaim •</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-[#1C2A24]">Words From the Table</h2>
+        <p class="text-sm text-[#607269]">Recognized for warm hospitality, honest cooking, and natural cellar stewardship.</p>
+      </div>
+
+      <div id="press-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== HOURS & LOCATION ==================== -->
+  <section id="hours" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Hours Card -->
+      <div class="clean-card p-8 space-y-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-[#1C2A24]">Hours of Gathering</h3>
+            <p class="text-xs text-[#607269]">Lunch, Dinner & Weekend Brunch</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-xs divide-y divide-[#1C2A24]/5">
+          <div class="pt-3 flex justify-between font-medium">
+            <span class="text-[#1C2A24]">Wednesday – Friday</span>
+            <span class="text-[#607269]">11:30 AM – 10:00 PM</span>
+          </div>
+          <div class="pt-3 flex justify-between font-medium">
+            <span class="text-[#1C2A24]">Saturday – Sunday</span>
+            <span class="text-[#D06746] font-bold">10:30 AM – 10:30 PM</span>
+          </div>
+          <div class="pt-3 flex justify-between font-medium">
+            <span class="text-[#1C2A24]">Monday – Tuesday</span>
+            <span class="text-neutral-400 italic">Farm Harvest & Private Buyouts</span>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-2xl bg-[#FAF7F2] border border-[#1C2A24]/5 text-xs text-[#274337]">
+          <strong>Garden Courtyard:</strong> Heated blankets and fire bowls active nightly after sunset.
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="clean-card p-8 space-y-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-[#1C2A24]">Location & Arrival</h3>
+            <p class="text-xs text-[#607269]">San Francisco Garden District</p>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-xs">
+          <div>
+            <span class="text-[#607269] block mb-1">Address</span>
+            <span class="text-sm font-bold text-[#1C2A24]">742 Cypress Avenue, Garden District, CA 94107</span>
+          </div>
+          <div>
+            <span class="text-[#607269] block mb-1">Complimentary Valet</span>
+            <span class="text-neutral-700">Curbside valet attendants ready starting at 5:00 PM nightly.</span>
+          </div>
+          <div>
+            <span class="text-[#607269] block mb-1">Dining Dress Code</span>
+            <span class="text-neutral-700">Garden Chic / Elevated Casual.</span>
+          </div>
+        </div>
+
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-outline-clean w-full py-2.5 rounded-xl text-center block text-xs font-bold uppercase tracking-wider">
+          Open in Maps
+        </a>
+      </div>
+
+      <!-- Quick Booking Box -->
+      <div class="clean-card p-8 bg-gradient-to-br from-white to-[#FAF7F2] border-2 border-[#D06746]/20 flex flex-col justify-between">
+        <div class="space-y-4">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-[#D06746] bg-[#F5ECE8] px-3 py-1 rounded-full">
+            Direct Concierge Desk
+          </span>
+          <h3 class="font-display text-2xl font-bold text-[#1C2A24]">Secure Your Table</h3>
+          <p class="text-xs text-[#607269] leading-relaxed">
+            Tables release 30 days in advance at 9:00 AM. Walk-ins are warmly greeted at our olive courtyard lounge and cocktail bar.
+          </p>
+
+          <div class="p-3.5 rounded-2xl bg-white border border-[#1C2A24]/5 space-y-1.5 text-xs">
+            <div class="flex justify-between">
+              <span class="text-[#607269]">Tonight's Courtyard:</span>
+              <span class="font-bold text-[#D06746]">3 Tables Open</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-[#607269]">Tomorrow's Atrium:</span>
+              <span class="font-bold text-emerald-600">Available</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <button class="open-reservation-trigger btn-terracotta w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+            Book Table Online
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-[#274337] text-white pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Newsletter Card -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-[#1C2A24] border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-xl space-y-2 text-center lg:text-left">
+          <h4 class="font-display text-2xl font-bold text-white">Join the Seasonal Garden Journal</h4>
+          <p class="text-xs sm:text-sm text-emerald-100/70">Invites to winemaker dinners, seasonal menu debuts, and exclusive terrace dining access.</p>
+        </div>
+
+        <form id="newsletter-form" class="w-full lg:w-auto flex flex-col sm:flex-row gap-3">
+          <input 
+            type="email" 
+            placeholder="Enter your email address..." 
+            required 
+            class="bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-xs text-white placeholder-emerald-100/50 focus:outline-none focus:border-amber-300 min-w-[280px]"
+          />
+          <button type="submit" class="btn-terracotta px-6 py-3 rounded-xl text-xs uppercase font-bold tracking-wider">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-xs text-emerald-100/70">
+        <div class="space-y-3">
+          <div class="font-display text-lg font-bold text-white">VERDANT</div>
+          <p class="text-emerald-100/60 leading-relaxed">Honest Mediterranean and California hearth cooking rooted in nature and living wines.</p>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-white font-bold uppercase tracking-wider">Explore</div>
+          <ul class="space-y-2">
+            <li><a href="#philosophy" class="hover:text-white">Our Ethos</a></li>
+            <li><a href="#menu" class="hover:text-white">Seasonal Menu</a></li>
+            <li><a href="#spaces" class="hover:text-white">Atmospheric Spaces</a></li>
+            <li><a href="#calculator" class="hover:text-white">Event Budget Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-white font-bold uppercase tracking-wider">Hospitality</div>
+          <ul class="space-y-2">
+            <li><a href="#" class="open-reservation-trigger hover:text-white">Table Reservations</a></li>
+            <li><a href="#" class="open-cart-trigger hover:text-white">Tasting Slate & Pre-order</a></li>
+            <li><a href="#" class="hover:text-white">Sommelier Wine Consultations</a></li>
+            <li><a href="#" class="hover:text-white">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="text-white font-bold uppercase tracking-wider">Concierge</div>
+          <ul class="space-y-2">
+            <li>+1 (415) 890-4210</li>
+            <li>bonjour@verdanttable.com</li>
+            <li>742 Cypress Avenue</li>
+            <li>Garden District, CA 94107</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-emerald-100/50">
+        <div>© 2026 VERDANT Table & Garden. All rights reserved. Clean Restaurant Client Demo.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Accessibility</a>
+          <a href="#" class="hover:text-white">Terms of Dining</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING QUICK ORDER PILL ==================== -->
+  <div id="floating-order-pill" class="fixed bottom-6 right-6 z-30 transition-transform duration-300 scale-0">
+    <button 
+      class="open-cart-trigger btn-terracotta px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 border-2 border-white"
+    >
+      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+      <span class="text-xs uppercase tracking-wider font-bold">Tasting Slate:</span>
+      <span id="floating-order-total" class="font-display font-bold text-sm text-white">$0.00</span>
+    </button>
+  </div>
+
+  <!-- ==================== TASTING SLATE / CART DRAWER ==================== -->
+  <div id="cart-backdrop" class="drawer-backdrop fixed inset-0 bg-[#1C2A24]/60 backdrop-blur-sm z-50"></div>
+  <aside id="cart-drawer" class="drawer-panel fixed top-0 right-0 bottom-0 w-full max-w-md bg-white border-l border-[#1C2A24]/10 z-50 flex flex-col shadow-2xl">
+    <div class="p-6 border-b border-[#1C2A24]/10 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-[#EBF1ED] text-[#274337] flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold text-[#1C2A24]">Your Tasting Slate</h3>
+          <p class="text-[11px] text-[#607269]">Curate dining pre-orders or takeout</p>
+        </div>
+      </div>
+      <button id="close-cart-btn" class="w-8 h-8 rounded-full bg-[#FAF7F2] text-[#1C2A24] flex items-center justify-center hover:bg-neutral-200">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <div id="cart-items-list" class="flex-1 overflow-y-auto p-6 space-y-3">
+      <!-- Rendered by app.js -->
+    </div>
+
+    <div class="p-6 border-t border-[#1C2A24]/10 bg-[#FAF7F2] space-y-4">
+      <!-- Tip Selector -->
+      <div>
+        <label class="text-[11px] uppercase tracking-wider font-bold text-[#607269] block mb-2">Hospitality Staff Gratuity</label>
+        <div class="grid grid-cols-4 gap-2">
+          <button data-tip="18" class="tip-btn py-1.5 rounded-lg border border-[#1C2A24]/10 text-xs font-bold text-[#1C2A24] bg-white">18%</button>
+          <button data-tip="20" class="tip-btn py-1.5 rounded-lg border border-[#274337] bg-[#274337] text-white text-xs font-bold">20%</button>
+          <button data-tip="25" class="tip-btn py-1.5 rounded-lg border border-[#1C2A24]/10 text-xs font-bold text-[#1C2A24] bg-white">25%</button>
+          <button data-tip="0" class="tip-btn py-1.5 rounded-lg border border-[#1C2A24]/10 text-xs font-bold text-[#1C2A24] bg-white">Custom</button>
+        </div>
+      </div>
+
+      <div class="space-y-1 text-xs text-[#607269]">
+        <div class="flex justify-between">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="font-bold text-[#1C2A24]">$0.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Estimated Taxes (8.875%)</span>
+          <span id="cart-tax" class="font-bold text-[#1C2A24]">$0.00</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Staff Tip</span>
+          <span id="cart-tip" class="font-bold text-[#1C2A24]">$0.00</span>
+        </div>
+        <div class="flex justify-between text-base font-display font-bold text-[#1C2A24] pt-2 border-t border-[#1C2A24]/10">
+          <span>Total</span>
+          <span id="cart-total" class="text-[#D06746]">$0.00</span>
+        </div>
+      </div>
+
+      <button id="cart-checkout-btn" class="btn-terracotta w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+        <span>Attach to Table Reservation</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </button>
+      <p class="text-[10px] text-center text-[#607269]">Settled upon arrival or added seamlessly to your table bill.</p>
+    </div>
+  </aside>
+
+  <!-- ==================== RESERVATION MODAL ==================== -->
+  <div id="reservation-modal" class="hidden fixed inset-0 z-50 bg-[#1C2A24]/70 backdrop-blur-md items-center justify-center p-4 overflow-y-auto">
+    <div class="relative bg-white border border-[#1C2A24]/10 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl my-8">
+      
+      <button id="close-res-btn" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#FAF7F2] text-[#1C2A24] hover:bg-neutral-200 flex items-center justify-center">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <div id="reservation-modal-body">
+        <div class="text-center mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#D06746]">Instant Table Reservation</span>
+          <h2 class="font-display text-3xl font-bold text-[#1C2A24] mt-1">Reserve Your Table at VERDANT</h2>
+          <p class="text-xs text-[#607269] mt-1">Select your preferred date, service time, and dining atmosphere.</p>
+        </div>
+
+        <form id="reservation-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Guests</label>
+              <select name="res-guests" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="8+">8+ Large Party</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Date</label>
+              <input type="date" name="res-date" id="res-date-input" required class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Time Slot</label>
+              <select name="res-time" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+                <option value="5:30 PM">5:30 PM (Sunset)</option>
+                <option value="6:30 PM">6:30 PM</option>
+                <option value="7:30 PM" selected>7:30 PM (Prime)</option>
+                <option value="8:30 PM">8:30 PM</option>
+                <option value="9:15 PM">9:15 PM (Late)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Seating Choice -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-2">Dining Atmosphere</label>
+            <div id="res-seating-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+
+          <!-- Guest Contact Details -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Full Name</label>
+              <input type="text" name="res-name" required placeholder="Elena Vance" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Email Address</label>
+              <input type="email" name="res-email" required placeholder="elena@cypress.com" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Phone Number</label>
+              <input type="tel" name="res-phone" required placeholder="+1 (415) 000-0000" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Dining Occasion</label>
+              <select name="res-occasion" class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl px-3 py-2 text-xs font-bold text-[#1C2A24] focus:outline-none focus:border-[#D06746]">
+                <option value="Dinner Service">Dinner Service</option>
+                <option value="Anniversary">Anniversary</option>
+                <option value="Birthday">Birthday Celebration</option>
+                <option value="Business Entertaining">Business Entertaining</option>
+                <option value="Romantic Date">Romantic Evening</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-[#607269] mb-1">Allergies or Special Notes</label>
+            <textarea name="res-notes" rows="2" placeholder="e.g. Nut allergy, quiet courtyard table preferred..." class="w-full bg-[#FAF7F2] border border-[#1C2A24]/10 rounded-xl p-3 text-xs text-[#1C2A24] focus:outline-none focus:border-[#D06746]"></textarea>
+          </div>
+
+          <button type="submit" class="btn-terracotta w-full py-3.5 rounded-xl text-xs font-bold uppercase tracking-wider">
+            Confirm Table Reservation
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== DISH QUICK VIEW MODAL ==================== -->
+  <div id="dish-modal" class="hidden fixed inset-0 z-50 bg-[#1C2A24]/70 backdrop-blur-md items-center justify-center p-4 overflow-y-auto">
+    <div id="dish-modal-content" class="w-full flex justify-center my-8">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Application Logic -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
